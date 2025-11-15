@@ -117,7 +117,7 @@ flatpak override --user --filesystem=xdg-config/MangoHud:ro
 grep -qF 'alias update-system' ~/.bashrc || cat << 'EOF' >> ~/.bashrc
 export PATH="$HOME/.cargo/bin:$PATH"
 pokeget random --hide-name | fastfetch --file-raw -
-alias system-update='sudo snap refresh && sudo dnf update -y && flatpak update -y'
+alias system-update='sudo snap refresh && sudo dnf update -y --refresh && flatpak update -y'
 EOF
 
 # Configure Kitty
