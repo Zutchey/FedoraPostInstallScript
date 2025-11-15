@@ -113,6 +113,11 @@ flatpak override --user --filesystem=xdg-config/MangoHud:ro
 # Install Snaps (Losslesscut AppImage)
 #sudo snap install spotify losslesscut
 
+#Enable Wine NTsync
+cat << EOF | sudo tee /etc/modules-load.d/ntsync.conf > /dev/null
+ntsync
+EOF
+
 # Configure shell
 grep -qF 'alias update-system' ~/.bashrc || cat << 'EOF' >> ~/.bashrc
 export PATH="$HOME/.cargo/bin:$PATH"
