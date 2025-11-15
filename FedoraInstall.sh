@@ -37,8 +37,8 @@ sudo hostnamectl set-hostname fedora
 sudo dnf install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release -y
 sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
 sudo dnf copr enable -y derisis13/ani-cli
-#sudo dnf copr enable -y sneexy/floorp
 sudo dnf copr enable -y kylegospo/wallpaper-engine-kde-plugin
+#sudo dnf copr enable -y sneexy/floorp
 #sudo dnf copr enable -y brycensranch/gpu-screen-recorder-git
 #sudo dnf copr enable -y ilyaz/LACT
 
@@ -54,18 +54,81 @@ sudo dnf swap mesa-vulkan-drivers.i686 mesa-vulkan-drivers-freeworld.i686 -y
 
 # Install packages
 sudo dnf install -y --skip-unavailable --skip-broken --allowerasing --refresh \
-    steam ani-cli trash-cli cargo java cmatrix fastfetch gapless \
-    gedit pavucontrol kitty gnome-disk-utility cowsay fortune-mod gimp vlc \
-    heroic neovim gnome-boxes mpv curl cabextract xorg-x11-font-utils fontconfig \
-    qbittorrent obs-studio umu-launcher lutris goverlay mangohud docker docker-compose \
-    testdisk winetricks snapd chromium falcond gnome-tweaks g4music \
-    kdenlive krita wallpaper-engine-kde-plugin protontricks htop bison \
-    obs-studio-plugin-vkcapture cpu-x pokeget timeshift discord flex \
-    freetype-devel libX11-devel libXext-devel libXcursor-devel libXfixes-devel \
-    libXrandr-devel libXrender-devel libXi-devel libXinerama-devel gtk3-devel \
-    mesa-libGL-devel mesa-libEGL-devel libxslt-devel libpng-devel zlib-devel \
-    cups-devel dbus-devel alsa-lib-devel pulseaudio-libs-devel openldap-devel \
-    libudev-devel libv4l-devel gphoto2-devel libusb1-devel 
+    steam \
+    ani-cli \
+    trash-cli \
+    cargo \
+    java \
+    cmatrix \
+    fastfetch \
+    gapless \
+    gedit \
+    pavucontrol \
+    kitty \
+    gnome-disk-utility \
+    cowsay \
+    fortune-mod \
+    gimp \
+    vlc \
+    heroic \
+    neovim \
+    gnome-boxes \
+    mpv \
+    curl \
+    cabextract \
+    xorg-x11-font-utils \
+    fontconfig \
+    qbittorrent \
+    obs-studio \
+    umu-launcher \
+    lutris \
+    goverlay \
+    mangohud \
+    docker \
+    docker-compose \
+    testdisk \
+    winetricks \
+    snapd \
+    chromium \
+    falcond \
+    gnome-tweaks \
+    g4music \
+    kdenlive \
+    krita \
+    wallpaper-engine-kde-plugin \
+    protontricks \
+    htop \
+    bison \
+    obs-studio-plugin-vkcapture \
+    cpu-x \
+    pokeget \
+    timeshift \
+    discord \
+    flex \
+    freetype-devel \
+    libX11-devel \
+    libXext-devel \
+    libXcursor-devel \
+    libXfixes-devel \
+    libXrandr-devel \
+    libXrender-devel \
+    libXi-devel \
+    libXinerama-devel \
+    gtk3-devel \
+    mesa-libGL-devel \
+    mesa-libEGL-devel \
+    libxslt-devel \
+    libpng-devel \
+    zlib-devel \
+    cups-devel \
+    dbus-devel \
+    alsa-lib-devel \
+    pulseaudio-libs-devel \
+    openldap-devel \
+    libudev-devel \
+    libv4l-devel \
+    gphoto2-devel \
+    libusb1-devel 
 
 # Install Gnome
 #sudo dnf group install gnome-desktop -y
@@ -91,16 +154,35 @@ echo 'OBS_VKCAPTURE=1' | sudo tee -a /etc/environment
 #gsettings set org.gnome.mutter experimental-features "['variable-refresh-rate']"
 
 # Install flatpaks
-flatpak install -y --system \
-    flathub io.github.ryubing.Ryujinx it.mijorus.gearlever org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/25.08 \
-    io.missioncenter.MissionCenter org.localsend.localsend_app com.spotify.Client \
-    dev.bragefuglseth.Keypunch org.nickvision.tubeconverter com.dec05eba.gpu_screen_recorder \
-    io.gitlab.theevilskeleton.Upscaler garden.jamie.Morphosis com.usebottles.bottles \
-    dev.vencord.Vesktop com.github.wwmm.easyeffects fr.handbrake.ghb com.protonvpn.www \
-    me.proton.Pass io.github.sigmasd.stimulator com.mattjakeman.ExtensionManager \
-    ca.desrt.dconf-editor io.github.flattool.Ignition com.github.tchx84.Flatseal \
-    org.vinegarhq.Sober com.vysp3r.ProtonPlus io.github.ilya_zlobintsev.LACT \
-    com.valvesoftware.Steam.CompatibilityTool.Proton-GE org.azahar_emu.Azahar sh.ppy.osu
+flatpak install -y --system flathub \
+    io.github.ryubing.Ryujinx \
+    it.mijorus.gearlever \
+    org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/25.08 \
+    io.missioncenter.MissionCenter \
+    org.localsend.localsend_app \
+    com.spotify.Client \
+    dev.bragefuglseth.Keypunch \
+    org.nickvision.tubeconverter \
+    com.dec05eba.gpu_screen_recorder \
+    io.gitlab.theevilskeleton.Upscaler \
+    garden.jamie.Morphosis \
+    com.usebottles.bottles \
+    dev.vencord.Vesktop \
+    com.github.wwmm.easyeffects \
+    fr.handbrake.ghb \
+    com.protonvpn.www \
+    me.proton.Pass \
+    io.github.sigmasd.stimulator \
+    com.mattjakeman.ExtensionManager \
+    ca.desrt.dconf-editor \
+    io.github.flattool.Ignition \
+    com.github.tchx84.Flatseal \
+    org.vinegarhq.Sober \
+    com.vysp3r.ProtonPlus \
+    io.github.ilya_zlobintsev.LACT \
+    com.valvesoftware.Steam.CompatibilityTool.Proton-GE \
+    org.azahar_emu.Azahar \
+    sh.ppy.osu
 
 flatpak repair
 
