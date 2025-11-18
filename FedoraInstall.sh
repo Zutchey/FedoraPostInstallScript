@@ -9,9 +9,11 @@ SUDO_PID=$!
 trap 'kill $SUDO_PID' EXIT
 
 # Append max_parallel_downloads setting to dnf.conf
-cat << EOF | sudo tee -a /etc/dnf/dnf.conf
-max_parallel_downloads=20
-EOF
+grep -qxF 'max_parallel_downloads=20' /etc/dnf/dnf.conf ||
+echo 'max_parallel_downloads=20' | sudo tee -a /etc/dnf/dnf.conf
+#cat << EOF | sudo tee -a /etc/dnf/dnf.conf
+#max_parallel_downloads=20
+#EOF
 
 # Create directories
 mkdir -p ~/.config/obs-studio/plugins ~/.config/kitty ~/.config/fastfetch
@@ -30,7 +32,7 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 #sudo flatpak remote-delete fedora
 
 # Change computer name
-sudo hostnamectl set-hostname fedora
+sudo hostnamectl set-hostname fedora-pc
 
 # Add repositories
 sudo dnf install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release -y
@@ -128,7 +130,7 @@ sudo dnf install -y --skip-unavailable --skip-broken --allowerasing --refresh \
     libv4l-devel \
     gphoto2-devel \
     libusb1-devel \
-    rocm \
+    rocm-opencl \
     libxcrypt-compat \
     libcurl \
     libcurl-devel \
@@ -205,9 +207,13 @@ ntsync
 EOF
 
 # Configure shell
-grep -qF 'alias update-system' ~/.bashrc || cat << 'EOF' >> ~/.bashrc
+grep -qF 'alias system-update' ~/.bashrc || cat << 'EOF' >> ~/.bashrc
 export PATH="$HOME/.cargo/bin:$PATH"
-pokeget random --hide-name | fastfetch --file-raw -
+
+if [[ $- == *i* ]]; then
+    pokeget random --hide-name | fastfetch --file-raw -
+fi
+
 alias system-update='sudo snap refresh && sudo dnf update -y --refresh && flatpak update -y'
 EOF
 
