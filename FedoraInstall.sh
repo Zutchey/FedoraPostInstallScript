@@ -127,7 +127,12 @@ sudo dnf install -y --skip-unavailable --skip-broken --allowerasing --refresh \
     libudev-devel \
     libv4l-devel \
     gphoto2-devel \
-    libusb1-devel 
+    libusb1-devel \
+    rocm \
+    libxcrypt-compat \
+    libcurl \
+    libcurl-devel \
+    mesa-libGLU
 
 # Install Gnome
 #sudo dnf group install gnome-desktop -y
