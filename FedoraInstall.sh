@@ -127,6 +127,7 @@ sudo dnf install -y --skip-unavailable --skip-broken --allowerasing --refresh \
 
 #Enable services
 sudo systemctl enable --now falcond
+sudo systemctl enable --now snapd.socket
 sudo systemctl enable --now docker.service
 sudo usermod -aG docker $USER
 
