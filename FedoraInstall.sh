@@ -130,7 +130,8 @@ sudo dnf install -y --skip-unavailable --skip-broken --allowerasing --refresh \
     libcurl \
     libcurl-devel \
     mesa-libGLU \
-    freerdp
+    freerdp \
+    libva-utils
 
 #Maybe remove freetype devel > libusb1 devel later on
 
