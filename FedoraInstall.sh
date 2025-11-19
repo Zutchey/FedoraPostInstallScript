@@ -8,12 +8,15 @@ done &
 SUDO_PID=$!
 trap 'kill $SUDO_PID' EXIT
 
-#Change computer name
-sudo hostnamectl set-hostname fedora-pc
-
 #Faster Package Downloads
 grep -qxF 'max_parallel_downloads=20' /etc/dnf/dnf.conf ||
 echo 'max_parallel_downloads=20' | sudo tee -a /etc/dnf/dnf.conf
+
+#Update Firmware if Available
+sudo fwupdmgr refresh --force
+sudo fwupdmgr get-devices
+sudo fwupdmgr get-updates
+sudo fwupdmgr update -y
 
 #Create directories
 mkdir -p ~/.config/obs-studio/plugins ~/.config/kitty ~/.config/fastfetch ~/.config/MangoHud
@@ -23,14 +26,8 @@ wget -qO- "https://github.com/dimtpap/obs-pipewire-audio-capture/releases/downlo
 tar -xzf - -C ~/.config/obs-studio/plugins
 
 #Add Flathub Flatpaks
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo --user
-
-#Update Firmware if Available
-sudo fwupdmgr refresh --force
-sudo fwupdmgr get-devices
-sudo fwupdmgr get-updates
-sudo fwupdmgr update -y
 
 #Add repositories
 sudo dnf install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release -y
@@ -336,6 +333,9 @@ upload_logs
 
 blacklist=pamac-manager,lact,ghb,bitwig-studio,ptyxis,yumex
 EOF
+
+#Change computer name
+sudo hostnamectl set-hostname fedora-pc
 
 #Additional Things (Opt in(uncomment))
 #gsettings set org.gnome.mutter experimental-features "['variable-refresh-rate']"
