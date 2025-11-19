@@ -204,7 +204,7 @@ if [[ $- == *i* ]]; then
     pokeget random --hide-name | fastfetch --file-raw -
 fi
 
-alias system-update='sudo snap refresh && sudo dnf update -y --refresh && flatpak update -y'
+alias system-update='sudo dnf update -y --refresh && flatpak update -y'
 EOF
 
 #Configure Kitty
