@@ -288,12 +288,12 @@ toggle_hud=Shift_R+F12
 no_display
 pci_dev=0:03:00.0
 table_columns=3
-gpu_text=9070 XT
+gpu_text=GPU
 gpu_stats
 gpu_temp
 gpu_power
 gpu_color=2E9762
-cpu_text=7800X3D
+cpu_text=CPU
 cpu_stats
 core_load
 core_bars
