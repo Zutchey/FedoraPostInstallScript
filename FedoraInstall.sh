@@ -81,7 +81,8 @@ sudo dnf install -y --skip-unavailable --skip-broken --allowerasing --refresh \
     docker-compose \
     testdisk \
     winetricks \
-    snapd \
+    wine \
+    wine-core \
     chromium \
     falcond \
     gnome-tweaks \
@@ -134,7 +135,6 @@ sudo dnf install -y --skip-unavailable --skip-broken --allowerasing --refresh \
 
 #Enable services
 sudo systemctl enable --now falcond
-sudo systemctl enable --now snapd.socket
 sudo systemctl enable --now docker.service
 sudo usermod -aG docker $USER
 
@@ -190,9 +190,6 @@ flatpak override --user --filesystem=/home/$USER/.icons/:ro
 flatpak override --user --filesystem=/usr/share/icons/:ro
 flatpak override --user --env=XCURSOR_PATH=$HOME/.icons
 flatpak override --user --filesystem=xdg-config/MangoHud:ro
-
-#Enable Snaps
-sudo snap install hello-world
 
 #Enable Wine NTsync
 cat << EOF | sudo tee /etc/modules-load.d/ntsync.conf > /dev/null
