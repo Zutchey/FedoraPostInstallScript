@@ -38,6 +38,12 @@ sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-releas
 sudo dnf copr enable -y derisis13/ani-cli
 sudo dnf copr enable -y kylegospo/wallpaper-engine-kde-plugin
 
+#Fedora 43 Post Install Guide commands
+sudo dnf group upgrade core -y
+sudo dnf4 group install core -y
+sudo dnf install ffmpeg-libs libva libva-utils -y
+sudo timedatectl set-local-rtc '0'
+
 #Multimedia Codecs
 sudo dnf swap ffmpeg-free ffmpeg --allowerasing -y
 sudo dnf update @multimedia --setopt="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin -y
@@ -107,7 +113,6 @@ sudo dnf install -y --allowerasing libcurl
 sudo dnf install -y --allowerasing libcurl-devel
 sudo dnf install -y --allowerasing mesa-libGLU
 sudo dnf install -y --allowerasing freerdp
-sudo dnf install -y --allowerasing libva-utils
 
 #Enable services
 sudo systemctl enable --now falcond
