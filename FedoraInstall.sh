@@ -12,6 +12,10 @@ trap 'kill $SUDO_PID' EXIT
 grep -qxF 'max_parallel_downloads=20' /etc/dnf/dnf.conf ||
 echo 'max_parallel_downloads=20' | sudo tee -a /etc/dnf/dnf.conf
 
+#Try to prevent slow downloads
+grep -qxF 'fastestmirror=False' /etc/dnf/dnf.conf || \
+echo 'fastestmirror=False' | sudo tee -a /etc/dnf/dnf.conf
+
 #Update Firmware if Available
 sudo fwupdmgr refresh --force
 sudo fwupdmgr get-devices
