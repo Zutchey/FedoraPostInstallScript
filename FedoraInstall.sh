@@ -315,6 +315,9 @@ kill "$SUDO_PID"
 #Enable Steam h.264 (Auto closes after 5 minutes)
 steam steam://unlockh264/ & sleep 180; kill $(pgrep steam)
 
+#seperate steam output and reboot output
+echo user
+
 echo "Setup complete! Reboot recommended."
 while true; do
     printf "Reboot now? (y/n) "
