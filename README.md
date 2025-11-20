@@ -1,7 +1,7 @@
 # FedoraPostInstallScript
 NOT TESTED ON NVIDIA OR INTEL GPUS!!!
 
-Should work for Intel GPUs, and might make a script for NVIDIA GPUs later on. Only problem is I don't have an NVIDIA GPU. At least not a current one.
+Should work for Intel GPUs, and might make a script for NVIDIA GPUs later on. Only problem is I don't have an NVIDIA GPU. At least not an RTX one.
 
 This is a script made by me for Fedora, and only Fedora, to be used post install. It is based on my own preferences of how I prefer my Fedora system. This script is made so that the user only has to give one input and the script does the rest.
 
