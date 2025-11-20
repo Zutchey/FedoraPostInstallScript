@@ -297,7 +297,7 @@ custom_text=Session:
 exec=echo $XDG_SESSION_TYPE
 #offset=0
 
-output_folder=/home/jesus/Documents/other/mangohud
+output_folder=~/Documents
 log_duration=30
 autostart_log=0
 log_interval=100
