@@ -132,7 +132,6 @@ echo 'MANGOHUD=1' | sudo tee -a /etc/environment
 
 #Gnome Changes
 gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize,close"
-gsettings set org.gnome.mutter experimental-features "['variable-refresh-rate']"
 
 #Install flatpaks
 flatpak install -y --system flathub \
