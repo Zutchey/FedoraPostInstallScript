@@ -15,12 +15,6 @@ echo 'max_parallel_downloads=20' | sudo tee -a /etc/dnf/dnf.conf
 grep -qxF 'fastestmirror=False' /etc/dnf/dnf.conf || \
 echo 'fastestmirror=False' | sudo tee -a /etc/dnf/dnf.conf
 
-#Update Firmware if Available
-sudo fwupdmgr refresh --force -y
-sudo fwupdmgr get-devices -y
-sudo fwupdmgr get-updates -y
-sudo fwupdmgr update -y
-
 #Create directories
 mkdir -p ~/.config/obs-studio/plugins ~/.config/kitty ~/.config/fastfetch ~/.config/MangoHud
 
@@ -37,12 +31,6 @@ sudo dnf install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/t
 sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
 sudo dnf copr enable -y derisis13/ani-cli
 sudo dnf copr enable -y kylegospo/wallpaper-engine-kde-plugin
-
-#Fedora 43 Post Install Guide commands
-sudo dnf group upgrade core -y
-sudo dnf4 group install core -y
-sudo dnf install ffmpeg-libs libva libva-utils -y
-sudo timedatectl set-local-rtc '0'
 
 #Multimedia Codecs
 sudo dnf swap ffmpeg-free ffmpeg --allowerasing -y
@@ -113,6 +101,7 @@ sudo dnf install -y --allowerasing libcurl
 sudo dnf install -y --allowerasing libcurl-devel
 sudo dnf install -y --allowerasing mesa-libGLU
 sudo dnf install -y --allowerasing freerdp
+sudo dnf install -y --allowerasing libva-utils
 
 #Enable services
 sudo systemctl enable --now falcond
