@@ -16,9 +16,9 @@ grep -qxF 'fastestmirror=False' /etc/dnf/dnf.conf || \
 echo 'fastestmirror=False' | sudo tee -a /etc/dnf/dnf.conf
 
 #Update Firmware if Available
-sudo fwupdmgr refresh --force
-sudo fwupdmgr get-devices
-sudo fwupdmgr get-updates
+sudo fwupdmgr refresh --force -y
+sudo fwupdmgr get-devices -y
+sudo fwupdmgr get-updates -y
 sudo fwupdmgr update -y
 
 #Create directories
