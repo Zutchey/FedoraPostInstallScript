@@ -107,8 +107,6 @@ sudo dnf install -y --skip-unavailable --skip-broken --allowerasing --refresh \
     freerdp \
     libva-utils
 
-#Maybe remove freetype devel > libusb1 devel later on
-
 #Enable services
 sudo systemctl enable --now falcond
 sudo systemctl enable --now docker.service
