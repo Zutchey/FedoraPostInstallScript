@@ -6,7 +6,6 @@ while true; do
   sleep 300
 done &
 SUDO_PID=$!
-trap 'kill $SUDO_PID' EXIT
 
 #Faster Package Downloads
 grep -qxF 'max_parallel_downloads=20' /etc/dnf/dnf.conf ||
@@ -57,7 +56,6 @@ sudo dnf install -y --allowerasing cargo
 sudo dnf install -y --allowerasing java
 sudo dnf install -y --allowerasing cmatrix
 sudo dnf install -y --allowerasing fastfetch
-sudo dnf install -y --allowerasing gapless
 sudo dnf install -y --allowerasing gedit
 sudo dnf install -y --allowerasing pavucontrol
 sudo dnf install -y --allowerasing kitty
@@ -314,11 +312,14 @@ EOF
 #Change computer name
 sudo hostnamectl set-hostname fedora-pc
 
-#Enable Steam h.264 (Auto closes after 5 minutes)
-steam steam://unlockh264/ & sleep 180; kill $(pgrep steam)
-
 #Additional Things (Opt in(uncomment))
 #sudo systemctl disable NetworkManager-wait-online.service
+
+#Kill sudo loop
+kill "$SUDO_PID"
+
+#Enable Steam h.264 (Auto closes after 5 minutes)
+steam steam://unlockh264/ & sleep 180; kill $(pgrep steam)
 
 echo "Setup complete! Reboot recommended."
 while true; do
