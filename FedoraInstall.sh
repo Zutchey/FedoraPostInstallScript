@@ -100,7 +100,8 @@ sudo dnf install -y --skip-unavailable --skip-broken --allowerasing --refresh \
     obs-studio-plugin-vkcapture \
     cpu-x \
     pokeget \
-    timeshift \
+    btrfs-assistant \
+    snapper \
     discord \
     flex \
     rocm-opencl \
@@ -129,6 +130,10 @@ fc-cache -f
 #System configuration
 echo 'OBS_VKCAPTURE=1' | sudo tee -a /etc/environment
 echo 'MANGOHUD=1' | sudo tee -a /etc/environment
+
+#Gnome Changes
+gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize,close"
+gsettings set org.gnome.mutter experimental-features "['variable-refresh-rate']"
 
 #Install flatpaks
 flatpak install -y --system flathub \
@@ -315,7 +320,6 @@ sudo hostnamectl set-hostname fedora-pc
 steam steam://unlockh264/ & sleep 300; kill $(pgrep steam)
 
 #Additional Things (Opt in(uncomment))
-#gsettings set org.gnome.mutter experimental-features "['variable-refresh-rate']"
 #sudo systemctl disable NetworkManager-wait-online.service
 
 echo "Setup complete! Reboot recommended."
