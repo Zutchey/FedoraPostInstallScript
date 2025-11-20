@@ -99,30 +99,6 @@ sudo dnf install -y --skip-unavailable --skip-broken --allowerasing --refresh \
     timeshift \
     discord \
     flex \
-    freetype-devel \
-    libX11-devel \
-    libXext-devel \
-    libXcursor-devel \
-    libXfixes-devel \
-    libXrandr-devel \
-    libXrender-devel \
-    libXi-devel \
-    libXinerama-devel \
-    gtk3-devel \
-    mesa-libGL-devel \
-    mesa-libEGL-devel \
-    libxslt-devel \
-    libpng-devel \
-    zlib-devel \
-    cups-devel \
-    dbus-devel \
-    alsa-lib-devel \
-    pulseaudio-libs-devel \
-    openldap-devel \
-    libudev-devel \
-    libv4l-devel \
-    gphoto2-devel \
-    libusb1-devel \
     rocm-opencl \
     libxcrypt-compat \
     libcurl \
