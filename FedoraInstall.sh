@@ -50,67 +50,66 @@ sudo dnf swap mesa-vdpau-drivers.i686 mesa-vdpau-drivers-freeworld.i686 -y
 sudo dnf swap mesa-vulkan-drivers.i686 mesa-vulkan-drivers-freeworld.i686 -y
 
 #Install packages
-sudo dnf install -y --skip-unavailable --skip-broken --allowerasing --refresh \
-    steam \
-    ani-cli \
-    trash-cli \
-    cargo \
-    java \
-    cmatrix \
-    fastfetch \
-    gapless \
-    gedit \
-    pavucontrol \
-    kitty \
-    gnome-disk-utility \
-    cowsay \
-    fortune-mod \
-    gimp \
-    vlc \
-    heroic \
-    neovim \
-    gnome-boxes \
-    mpv \
-    curl \
-    cabextract \
-    xorg-x11-font-utils \
-    fontconfig \
-    qbittorrent \
-    obs-studio \
-    umu-launcher \
-    lutris \
-    goverlay \
-    mangohud \
-    docker \
-    docker-compose \
-    testdisk \
-    winetricks \
-    wine \
-    wine-core \
-    chromium \
-    falcond \
-    gnome-tweaks \
-    g4music \
-    kdenlive \
-    krita \
-    wallpaper-engine-kde-plugin \
-    protontricks \
-    htop \
-    bison \
-    obs-studio-plugin-vkcapture \
-    cpu-x \
-    pokeget \
-    btrfs-assistant \
-    snapper \
-    discord \
-    flex \
-    rocm-opencl \
-    libxcrypt-compat \
-    libcurl \
-    libcurl-devel \
-    mesa-libGLU \
-    freerdp \
-    libva-utils
+sudo dnf install -y --skip-unavailable --skip-broken --allowerasing --refresh steam
+sudo dnf install -y --allowerasing ani-cli 
+sudo dnf install -y --allowerasing trash-cli
+sudo dnf install -y --allowerasing cargo
+sudo dnf install -y --allowerasing java
+sudo dnf install -y --allowerasing cmatrix
+sudo dnf install -y --allowerasing fastfetch
+sudo dnf install -y --allowerasing gapless
+sudo dnf install -y --allowerasing gedit
+sudo dnf install -y --allowerasing pavucontrol
+sudo dnf install -y --allowerasing kitty
+sudo dnf install -y --allowerasing gnome-disk-utility
+sudo dnf install -y --allowerasing cowsay
+sudo dnf install -y --allowerasing fortune-mod
+sudo dnf install -y --allowerasing gimp
+sudo dnf install -y --allowerasing vlc
+sudo dnf install -y --allowerasing heroic
+sudo dnf install -y --allowerasing neovim
+sudo dnf install -y --allowerasing gnome-boxes
+sudo dnf install -y --allowerasing mpv
+sudo dnf install -y --allowerasing curl
+sudo dnf install -y --allowerasing cabextract
+sudo dnf install -y --allowerasing xorg-x11-font-utils
+sudo dnf install -y --allowerasing fontconfig
+sudo dnf install -y --allowerasing qbittorrent
+sudo dnf install -y --allowerasing obs-studio
+sudo dnf install -y --allowerasing umu-launcher
+sudo dnf install -y --allowerasing lutris
+sudo dnf install -y --allowerasing goverlay
+sudo dnf install -y --allowerasing mangohud
+sudo dnf install -y --allowerasing docker
+sudo dnf install -y --allowerasing docker-compose
+sudo dnf install -y --allowerasing testdisk
+sudo dnf install -y --allowerasing winetricks
+sudo dnf install -y --allowerasing wine
+sudo dnf install -y --allowerasing wine-core
+sudo dnf install -y --allowerasing chromium
+sudo dnf install -y --allowerasing falcond
+sudo dnf install -y --allowerasing gnome-tweaks
+sudo dnf install -y --allowerasing g4music
+sudo dnf install -y --allowerasing kdenlive
+sudo dnf install -y --allowerasing krita
+sudo dnf install -y --allowerasing wallpaper-engine-kde-plugin
+sudo dnf install -y --allowerasing protontricks
+sudo dnf install -y --allowerasing htop
+sudo dnf install -y --allowerasing bison
+sudo dnf install -y --allowerasing obs-studio-plugin-vkcapture
+sudo dnf install -y --allowerasing cpu-x
+sudo dnf install -y --allowerasing pokeget
+sudo dnf install -y --allowerasing btrfs-assistant
+sudo dnf install -y --allowerasing snapper
+sudo dnf install -y --allowerasing discord
+sudo dnf install -y --allowerasing flex
+sudo dnf install -y --allowerasing rocm-opencl
+sudo dnf install -y --allowerasing libxcrypt-compat
+sudo dnf install -y --allowerasing libcurl
+sudo dnf install -y --allowerasing libcurl-devel
+sudo dnf install -y --allowerasing mesa-libGLU
+sudo dnf install -y --allowerasing freerdp
+sudo dnf install -y --allowerasing libva-utils
 
 #Enable services
 sudo systemctl enable --now falcond
