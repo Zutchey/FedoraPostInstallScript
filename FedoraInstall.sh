@@ -50,7 +50,7 @@ sudo dnf swap mesa-vdpau-drivers.i686 mesa-vdpau-drivers-freeworld.i686 -y
 sudo dnf swap mesa-vulkan-drivers.i686 mesa-vulkan-drivers-freeworld.i686 -y
 
 #Install packages
-sudo dnf install -y --skip-unavailable --skip-broken --allowerasing --refresh steam
+sudo dnf install -y --allowerasing --refresh steam
 sudo dnf install -y --allowerasing ani-cli 
 sudo dnf install -y --allowerasing trash-cli
 sudo dnf install -y --allowerasing cargo
