@@ -12,7 +12,7 @@ trap 'kill $SUDO_PID' EXIT
 grep -qxF 'max_parallel_downloads=20' /etc/dnf/dnf.conf ||
 echo 'max_parallel_downloads=20' | sudo tee -a /etc/dnf/dnf.conf
 
-#Try to prevent slow downloads
+#More Stable Downloads
 grep -qxF 'fastestmirror=False' /etc/dnf/dnf.conf || \
 echo 'fastestmirror=False' | sudo tee -a /etc/dnf/dnf.conf
 
@@ -132,7 +132,6 @@ echo 'MANGOHUD=1' | sudo tee -a /etc/environment
 
 #Install flatpaks
 flatpak install -y --system flathub \
-    io.github.ryubing.Ryujinx \
     it.mijorus.gearlever \
     org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/25.08 \
     io.missioncenter.MissionCenter \
@@ -144,7 +143,6 @@ flatpak install -y --system flathub \
     io.gitlab.theevilskeleton.Upscaler \
     garden.jamie.Morphosis \
     com.usebottles.bottles \
-    dev.vencord.Vesktop \
     com.github.wwmm.easyeffects \
     fr.handbrake.ghb \
     com.protonvpn.www \
@@ -157,6 +155,7 @@ flatpak install -y --system flathub \
     org.vinegarhq.Sober \
     com.vysp3r.ProtonPlus \
     io.github.ilya_zlobintsev.LACT \
+    io.github.ryubing.Ryujinx \
     com.valvesoftware.Steam.CompatibilityTool.Proton-GE \
     org.azahar_emu.Azahar \
     sh.ppy.osu
