@@ -311,6 +311,9 @@ EOF
 #Change computer name
 sudo hostnamectl set-hostname fedora-pc
 
+#Enable Steam h.264 (Auto closes after 5 minutes)
+steam steam://unlockh264/ & sleep 300; kill $(pgrep steam)
+
 #Additional Things (Opt in(uncomment))
 #gsettings set org.gnome.mutter experimental-features "['variable-refresh-rate']"
 #sudo systemctl disable NetworkManager-wait-online.service
