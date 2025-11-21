@@ -305,6 +305,32 @@ upload_logs
 blacklist=pamac-manager,lact,ghb,bitwig-studio,ptyxis,yumex
 EOF
 
+# Wooting Support
+sudo tee /etc/udev/rules.d/70-wooting.rules > /dev/null << 'EOF'
+# Wooting One Legacy
+SUBSYSTEM=="hidraw", ATTRS{idVendor}=="03eb", ATTRS{idProduct}=="ff01", TAG+="uaccess"
+SUBSYSTEM=="usb",    ATTRS{idVendor}=="03eb", ATTRS{idProduct}=="ff01", TAG+="uaccess"
+
+# Wooting One update mode
+SUBSYSTEM=="hidraw", ATTRS{idVendor}=="03eb", ATTRS{idProduct}=="2402", TAG+="uaccess"
+
+# Wooting Two Legacy
+SUBSYSTEM=="hidraw", ATTRS{idVendor}=="03eb", ATTRS{idProduct}=="ff02", TAG+="uaccess"
+SUBSYSTEM=="usb",    ATTRS{idVendor}=="03eb", ATTRS{idProduct}=="ff02", TAG+="uaccess"
+
+# Wooting Two update mode
+SUBSYSTEM=="hidraw", ATTRS{idVendor}=="03eb", ATTRS{idProduct}=="2403", TAG+="uaccess"
+
+# Generic Wooting devices
+SUBSYSTEM=="hidraw", ATTRS{idVendor}=="31e3", TAG+="uaccess"
+SUBSYSTEM=="usb",    ATTRS{idVendor}=="31e3", TAG+="uaccess"
+EOF
+
+# Reload udev rules
+sudo udevadm control --reload-rules
+sudo udevadm trigger
+
+
 #Change computer name
 sudo hostnamectl set-hostname fedora-pc
 
