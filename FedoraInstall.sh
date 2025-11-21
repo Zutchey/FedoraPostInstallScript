@@ -308,17 +308,11 @@ EOF
 #Change computer name
 sudo hostnamectl set-hostname fedora-pc
 
-#Additional Things (Opt in(uncomment))
-#sudo systemctl disable NetworkManager-wait-online.service
-
 #Kill sudo loop
 kill "$SUDO_PID"
 
-#Enable Steam h.264 (Auto closes after 5 minutes)
+#Enable Steam h.264 (Auto closes after 3 minutes)
 steam steam://unlockh264/ & sleep 180; kill $(pgrep steam)
-
-#seperate steam output and reboot output
-echo user
 
 echo "Setup complete! Reboot recommended."
 while true; do
