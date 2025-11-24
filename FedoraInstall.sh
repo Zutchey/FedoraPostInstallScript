@@ -105,9 +105,6 @@ sudo dnf install -y https://github.com/TibixDev/winboat/releases/download/v0.8.7
 
 #Install fonts
 sudo rpm --nodigest -i https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm
-wget -q https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/FantasqueSansMono.zip
-unzip -q FantasqueSansMono.zip -d ~/.local/share/fonts/
-rm FantasqueSansMono.zip
 fc-cache -f
 
 #System configuration
