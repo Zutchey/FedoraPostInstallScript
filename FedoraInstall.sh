@@ -136,7 +136,7 @@ flatpak install -y --system flathub \
     org.vinegarhq.Sober \
     com.vysp3r.ProtonPlus \
     io.github.ilya_zlobintsev.LACT \
-    com.valvesoftware.Steam.CompatibilityTool.Proton-GE \
+    com.valvesoftware.Steam.CompatibilityTool.Proton-GE
 
 flatpak repair
 
