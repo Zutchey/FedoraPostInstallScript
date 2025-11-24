@@ -47,7 +47,6 @@ sudo dnf install -y --allowerasing java
 sudo dnf install -y --allowerasing fastfetch
 sudo dnf install -y --allowerasing gedit
 sudo dnf install -y --allowerasing pavucontrol
-sudo dnf install -y --allowerasing kitty
 sudo dnf install -y --allowerasing gnome-disk-utility
 sudo dnf install -y --allowerasing gimp
 sudo dnf install -y --allowerasing vlc
@@ -187,43 +186,6 @@ selection_background none
 foreground #dddddd
 background #000000
 cursor #dddddd
-EOF
-
-#Configure Fastfetch
-cat << 'EOF' > ~/.config/fastfetch/config.jsonc
-{
-"$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
-"logo": {"padding": {"top": 1}},
-"display": {"separator": " 󰑃  "},
-"modules": [
-    "break",
-    {
-    "type": "title",
-    "format": "{#1}╭───────────── {#}{user-name-colored}",
-    "formatColor": "yellow"
-    },
-    {"type": "os", "key": " DISTRO", "keyColor": "yellow"},
-    {"type": "kernel", "key": "│ ├", "keyColor": "yellow"},
-    {"type": "packages", "key": "│ ├󰏖", "keyColor": "yellow"},
-    {"type": "shell", "key": "│ └", "keyColor": "yellow"},
-    {"type": "de", "key": "󰧨 DE/WM", "keyColor": "blue"},
-    {"type": "wm", "key": "│ ├", "keyColor": "blue"},
-    {"type": "wmtheme", "key": "│ ├󰉼", "keyColor": "blue"},
-    {"type": "icons", "key": "│ ├󰀻", "keyColor": "blue"},
-    {"type": "cursor", "key": "│ ├", "keyColor": "blue"},
-    {"type": "terminalfont", "key": "│ ├", "keyColor": "blue"},
-    {"type": "terminal", "key": "│ ├", "keyColor": "blue"},
-    {"type": "uptime", "key": "│ └󰅐", "keyColor": "blue"},
-    {"type": "host", "key": "󰌢 SYSTEM", "keyColor": "green"},
-    {"type": "cpu", "key": "│ ├󰻠", "keyColor": "green"},
-    {"type": "gpu", "key": "│ ├󰢮", "format": "{2}", "keyColor": "green"},
-    {"type": "memory", "key": "│ ├󰍛", "keyColor": "green"},
-    {"type": "disk", "key": "│ ├󰋊", "keyColor": "green"},
-    {"type": "display", "key": "│ └󰍹", "keyColor": "green", "compactType": "original-with-refresh-rate"},
-    {"type": "sound", "key": " AUDIO", "format": "{2}", "keyColor": "magenta"},
-    "break"
-    ]
-}
 EOF
 
 #Configure MangoHud
