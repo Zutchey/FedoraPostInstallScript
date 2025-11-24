@@ -74,15 +74,12 @@ sudo dnf install -y --allowerasing g4music
 sudo dnf install -y --allowerasing kdenlive
 sudo dnf install -y --allowerasing wallpaper-engine-kde-plugin
 sudo dnf install -y --allowerasing protontricks
-sudo dnf install -y --allowerasing htop
-sudo dnf install -y --allowerasing bison
 sudo dnf install -y --allowerasing obs-studio-plugin-vkcapture
 sudo dnf install -y --allowerasing cpu-x
 sudo dnf install -y --allowerasing pokeget
 sudo dnf install -y --allowerasing btrfs-assistant
 sudo dnf install -y --allowerasing snapper
 sudo dnf install -y --allowerasing discord
-sudo dnf install -y --allowerasing flex
 sudo dnf install -y --allowerasing rocm-opencl
 sudo dnf install -y --allowerasing libxcrypt-compat
 sudo dnf install -y --allowerasing libcurl
@@ -90,7 +87,6 @@ sudo dnf install -y --allowerasing libcurl-devel
 sudo dnf install -y --allowerasing mesa-libGLU
 sudo dnf install -y --allowerasing freerdp
 sudo dnf install -y --allowerasing libva-utils
-sudo dnf install -y --allowerasing kernel-devel
 
 #Install Core
 sudo dnf group install core -y
@@ -156,33 +152,6 @@ if [[ $- == *i* ]]; then
 fi
 
 alias system-update='sudo dnf update -y --refresh && flatpak update -y'
-EOF
-
-#Configure Kitty
-cat << 'EOF' > ~/.config/kitty/kitty.conf
-font_family FantasqueSansM Nerd Font Mono Bold
-font_size 16.0
-bold_font auto
-italic_font auto
-bold_italic_font auto
-
-background_opacity 0.9
-dynamic_background_opacity 1
-confirm_os_window_close 0
-
-cursor_trail 1
-linux_display_server auto
-scrollback_lines 2000
-wheel_scroll_min_lines 1
-enable_audio_bell no
-window_padding_width 4
-
-selection_foreground none
-selection_background none
-
-foreground #dddddd
-background #000000
-cursor #dddddd
 EOF
 
 #Configure MangoHud
