@@ -28,7 +28,6 @@ sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub
 #Add repositories
 sudo dnf install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release -y
 sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
-sudo dnf copr enable -y derisis13/ani-cli
 sudo dnf copr enable -y kylegospo/wallpaper-engine-kde-plugin
 
 #Multimedia Codecs
@@ -43,22 +42,16 @@ sudo dnf swap mesa-vulkan-drivers.i686 mesa-vulkan-drivers-freeworld.i686 -y
 
 #Install packages
 sudo dnf install -y --allowerasing --refresh steam
-sudo dnf install -y --allowerasing ani-cli 
-sudo dnf install -y --allowerasing trash-cli
 sudo dnf install -y --allowerasing cargo
 sudo dnf install -y --allowerasing java
-sudo dnf install -y --allowerasing cmatrix
 sudo dnf install -y --allowerasing fastfetch
 sudo dnf install -y --allowerasing gedit
 sudo dnf install -y --allowerasing pavucontrol
 sudo dnf install -y --allowerasing kitty
 sudo dnf install -y --allowerasing gnome-disk-utility
-sudo dnf install -y --allowerasing cowsay
-sudo dnf install -y --allowerasing fortune-mod
 sudo dnf install -y --allowerasing gimp
 sudo dnf install -y --allowerasing vlc
 sudo dnf install -y --allowerasing heroic
-sudo dnf install -y --allowerasing neovim
 sudo dnf install -y --allowerasing gnome-boxes
 sudo dnf install -y --allowerasing mpv
 sudo dnf install -y --allowerasing curl
@@ -73,16 +66,13 @@ sudo dnf install -y --allowerasing goverlay
 sudo dnf install -y --allowerasing mangohud
 sudo dnf install -y --allowerasing docker
 sudo dnf install -y --allowerasing docker-compose
-sudo dnf install -y --allowerasing testdisk
 sudo dnf install -y --allowerasing winetricks
 sudo dnf install -y --allowerasing wine
 sudo dnf install -y --allowerasing wine-core
-sudo dnf install -y --allowerasing chromium
 sudo dnf install -y --allowerasing falcond
 sudo dnf install -y --allowerasing gnome-tweaks
 sudo dnf install -y --allowerasing g4music
 sudo dnf install -y --allowerasing kdenlive
-sudo dnf install -y --allowerasing krita
 sudo dnf install -y --allowerasing wallpaper-engine-kde-plugin
 sudo dnf install -y --allowerasing protontricks
 sudo dnf install -y --allowerasing htop
@@ -133,19 +123,12 @@ flatpak install -y --system flathub \
     it.mijorus.gearlever \
     org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/25.08 \
     io.missioncenter.MissionCenter \
-    org.localsend.localsend_app \
     com.spotify.Client \
-    dev.bragefuglseth.Keypunch \
-    org.nickvision.tubeconverter \
     com.dec05eba.gpu_screen_recorder \
-    io.gitlab.theevilskeleton.Upscaler \
-    garden.jamie.Morphosis \
     com.usebottles.bottles \
     com.github.wwmm.easyeffects \
-    fr.handbrake.ghb \
     com.protonvpn.www \
     me.proton.Pass \
-    io.github.sigmasd.stimulator \
     com.mattjakeman.ExtensionManager \
     ca.desrt.dconf-editor \
     io.github.flattool.Ignition \
@@ -153,10 +136,7 @@ flatpak install -y --system flathub \
     org.vinegarhq.Sober \
     com.vysp3r.ProtonPlus \
     io.github.ilya_zlobintsev.LACT \
-    io.github.ryubing.Ryujinx \
     com.valvesoftware.Steam.CompatibilityTool.Proton-GE \
-    org.azahar_emu.Azahar \
-    sh.ppy.osu
 
 flatpak repair
 
