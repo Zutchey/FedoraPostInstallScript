@@ -57,7 +57,6 @@ sudo dnf install -y --allowerasing curl
 sudo dnf install -y --allowerasing cabextract
 sudo dnf install -y --allowerasing xorg-x11-font-utils
 sudo dnf install -y --allowerasing fontconfig
-sudo dnf install -y --allowerasing qbittorrent
 sudo dnf install -y --allowerasing obs-studio
 sudo dnf install -y --allowerasing umu-launcher
 sudo dnf install -y --allowerasing lutris
@@ -119,8 +118,6 @@ flatpak install -y --system flathub \
     com.dec05eba.gpu_screen_recorder \
     com.usebottles.bottles \
     com.github.wwmm.easyeffects \
-    com.protonvpn.www \
-    me.proton.Pass \
     com.mattjakeman.ExtensionManager \
     ca.desrt.dconf-editor \
     io.github.flattool.Ignition \
