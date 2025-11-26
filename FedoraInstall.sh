@@ -1,5 +1,12 @@
 #!/bin/bash
 
+#Log Terminal Output
+TIMESTAMP=$(date +"%Y-%m-%d_%H-%M-%S")
+LOGFILE="$HOME/Downloads/FedoraScript_${TIMESTAMP}.log"
+
+exec > >(tee -a "$LOGFILE") 2>&1
+echo "Logging to $LOGFILE"
+
 #Trap Sudo
 while true; do
   sudo -v
@@ -245,6 +252,10 @@ kill "$SUDO_PID"
 
 #Enable Steam h.264 (Auto closes after 3 minutes)
 steam steam://unlockh264/ & sleep 180; kill $(pgrep steam)
+
+#Make log read-only
+chmod 444 "$LOGFILE"
+echo "Log set to read-only: $LOGFILE"
 
 echo "Setup complete! Reboot recommended."
 while true; do
