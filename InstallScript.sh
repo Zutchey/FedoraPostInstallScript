@@ -332,13 +332,13 @@ sudo udevadm trigger
 sudo hostnamectl set-hostname fedora-pc
 
 #temp mesa fix
-sudo dnf downgrade mesa\*
+sudo dnf downgrade -y mesa\*
 
 #Kill sudo loop
 kill "$SUDO_PID"
 
 #Enable Steam h.264 (Auto closes after 2 minutes)
-#steam steam://unlockh264/ & sleep 120; kill $(pgrep steam)
+steam steam://unlockh264/ & sleep 120; kill $(pgrep steam)
 
 echo "Setup complete! Reboot recommended."
 while true; do
