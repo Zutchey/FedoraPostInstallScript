@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #Log Terminal Output
-LOGFILE="/var/log/fedora-setup.log"
+LOGFILE="$HOME/Downloads/fedora-setup.log"
 exec > >(tee -a "$LOGFILE") 2>&1
 
 #Trap Sudo
