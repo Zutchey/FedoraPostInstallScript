@@ -100,6 +100,7 @@ sudo dnf install -y --allowerasing libcurl-devel
 sudo dnf install -y --allowerasing mesa-libGLU
 sudo dnf install -y --allowerasing freerdp
 sudo dnf install -y --allowerasing libva-utils
+sudo dnf install -y --allowerasing zsh
 
 #Install Core
 sudo dnf group install core -y
