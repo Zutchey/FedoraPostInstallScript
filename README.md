@@ -12,4 +12,4 @@ sudo dnf install git -y
 git clone https://github.com/Zutchey/FedoraPostInstallScript
 cd FedoraPostInstallScript
 chmod +x FedoraInstall.sh
-./FedoraInstall.sh
+./InstallScript.sh
