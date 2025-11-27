@@ -11,5 +11,5 @@ cd ~/Downloads
 sudo dnf install git -y
 git clone https://github.com/Zutchey/FedoraPostInstallScript
 cd FedoraPostInstallScript
-chmod +x FedoraInstall.sh
+chmod +x InstallScript.sh
 ./InstallScript.sh
