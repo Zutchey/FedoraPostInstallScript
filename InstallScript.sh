@@ -1,11 +1,8 @@
 #!/bin/bash
 
 #Log Terminal Output
-TIMESTAMP=$(date +"%Y-%m-%d_%H-%M-%S")
-LOGFILE="$HOME/Downloads/FedoraScript_${TIMESTAMP}.log"
-
+LOGFILE="/var/log/fedora-setup.log"
 exec > >(tee -a "$LOGFILE") 2>&1
-echo "Logging to $LOGFILE"
 
 #Trap Sudo
 while true; do
@@ -334,15 +331,14 @@ sudo udevadm trigger
 #Change computer name
 sudo hostnamectl set-hostname fedora-pc
 
+#temp mesa fix
+sudo dnf downgrade mesa\*
+
 #Kill sudo loop
 kill "$SUDO_PID"
 
 #Enable Steam h.264 (Auto closes after 2 minutes)
 #steam steam://unlockh264/ & sleep 120; kill $(pgrep steam)
-
-#Make log read-only
-chmod 444 "$LOGFILE"
-echo "Log set to read-only: $LOGFILE"
 
 echo "Setup complete! Reboot recommended."
 while true; do
