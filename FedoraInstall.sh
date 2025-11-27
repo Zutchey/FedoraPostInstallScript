@@ -248,7 +248,7 @@ sudo udevadm trigger
 sudo hostnamectl set-hostname fedora-pc
 
 #temp fedora mesa fix ________________________________________________________________________________________________________________________________________________________________________________________________________________________
-sudo dnf downgrade mesa\*
+sudo dnf downgrade -y mesa\*
 
 #Kill sudo loop
 kill "$SUDO_PID"
