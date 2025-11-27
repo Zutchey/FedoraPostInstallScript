@@ -1,5 +1,12 @@
 #!/bin/bash
 
+#Log Terminal Output
+TIMESTAMP=$(date +"%Y-%m-%d_%H-%M-%S")
+LOGFILE="$HOME/Downloads/FedoraScript_${TIMESTAMP}.log"
+
+exec > >(tee -a "$LOGFILE") 2>&1
+echo "Logging to $LOGFILE"
+
 #Trap Sudo
 while true; do
   sudo -v
@@ -44,21 +51,16 @@ sudo dnf swap mesa-vulkan-drivers.i686 mesa-vulkan-drivers-freeworld.i686 -y
 #Install packages
 sudo dnf install -y --allowerasing --refresh steam
 sudo dnf install -y --allowerasing ani-cli 
-sudo dnf install -y --allowerasing trash-cli
 sudo dnf install -y --allowerasing cargo
 sudo dnf install -y --allowerasing java
-sudo dnf install -y --allowerasing cmatrix
 sudo dnf install -y --allowerasing fastfetch
 sudo dnf install -y --allowerasing gedit
 sudo dnf install -y --allowerasing pavucontrol
 sudo dnf install -y --allowerasing kitty
 sudo dnf install -y --allowerasing gnome-disk-utility
-sudo dnf install -y --allowerasing cowsay
-sudo dnf install -y --allowerasing fortune-mod
 sudo dnf install -y --allowerasing gimp
 sudo dnf install -y --allowerasing vlc
 sudo dnf install -y --allowerasing heroic
-sudo dnf install -y --allowerasing neovim
 sudo dnf install -y --allowerasing gnome-boxes
 sudo dnf install -y --allowerasing mpv
 sudo dnf install -y --allowerasing curl
@@ -77,7 +79,6 @@ sudo dnf install -y --allowerasing testdisk
 sudo dnf install -y --allowerasing winetricks
 sudo dnf install -y --allowerasing wine
 sudo dnf install -y --allowerasing wine-core
-sudo dnf install -y --allowerasing chromium
 sudo dnf install -y --allowerasing falcond
 sudo dnf install -y --allowerasing gnome-tweaks
 sudo dnf install -y --allowerasing g4music
@@ -86,14 +87,12 @@ sudo dnf install -y --allowerasing krita
 sudo dnf install -y --allowerasing wallpaper-engine-kde-plugin
 sudo dnf install -y --allowerasing protontricks
 sudo dnf install -y --allowerasing htop
-sudo dnf install -y --allowerasing bison
 sudo dnf install -y --allowerasing obs-studio-plugin-vkcapture
 sudo dnf install -y --allowerasing cpu-x
 sudo dnf install -y --allowerasing pokeget
 sudo dnf install -y --allowerasing btrfs-assistant
 sudo dnf install -y --allowerasing snapper
 sudo dnf install -y --allowerasing discord
-sudo dnf install -y --allowerasing flex
 sudo dnf install -y --allowerasing rocm-opencl
 sudo dnf install -y --allowerasing libxcrypt-compat
 sudo dnf install -y --allowerasing libcurl
@@ -101,7 +100,6 @@ sudo dnf install -y --allowerasing libcurl-devel
 sudo dnf install -y --allowerasing mesa-libGLU
 sudo dnf install -y --allowerasing freerdp
 sudo dnf install -y --allowerasing libva-utils
-sudo dnf install -y --allowerasing kernel-devel
 
 #Install Core
 sudo dnf group install core -y
@@ -129,7 +127,8 @@ echo 'MANGOHUD=1' | sudo tee -a /etc/environment
 gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize,close"
 
 #Install flatpaks
-flatpak install -y --system flathub \
+flatpak install -y flathub \
+    com.usebottles.bottles \
     it.mijorus.gearlever \
     org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/25.08 \
     io.missioncenter.MissionCenter \
@@ -140,22 +139,20 @@ flatpak install -y --system flathub \
     com.dec05eba.gpu_screen_recorder \
     io.gitlab.theevilskeleton.Upscaler \
     garden.jamie.Morphosis \
-    com.usebottles.bottles \
     com.github.wwmm.easyeffects \
     fr.handbrake.ghb \
     com.protonvpn.www \
-    me.proton.Pass \
     io.github.sigmasd.stimulator \
     com.mattjakeman.ExtensionManager \
     ca.desrt.dconf-editor \
     io.github.flattool.Ignition \
     com.github.tchx84.Flatseal \
-    org.vinegarhq.Sober \
     com.vysp3r.ProtonPlus \
     io.github.ilya_zlobintsev.LACT \
-    io.github.ryubing.Ryujinx \
     com.valvesoftware.Steam.CompatibilityTool.Proton-GE \
     org.azahar_emu.Azahar \
+    org.vinegarhq.Sober \
+    io.github.ryubing.Ryujinx \
     sh.ppy.osu
 
 flatpak repair
@@ -331,15 +328,21 @@ EOF
 sudo udevadm control --reload-rules
 sudo udevadm trigger
 
-
 #Change computer name
 sudo hostnamectl set-hostname fedora-pc
+
+#temp fedora mesa fix ________________________________________________________________________________________________________________________________________________________________________________________________________________________
+sudo dnf downgrade -y mesa\*
 
 #Kill sudo loop
 kill "$SUDO_PID"
 
-#Enable Steam h.264 (Auto closes after 3 minutes)
-steam steam://unlockh264/ & sleep 180; kill $(pgrep steam)
+#Enable Steam h.264 (Auto closes after 2 minutes)
+#steam steam://unlockh264/ & sleep 120; kill $(pgrep steam)
+
+#Make log read-only
+chmod 444 "$LOGFILE"
+echo "Log set to read-only: $LOGFILE"
 
 echo "Setup complete! Reboot recommended."
 while true; do
