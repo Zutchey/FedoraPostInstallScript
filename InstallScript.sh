@@ -14,9 +14,6 @@ while true; do
 done &
 SUDO_PID=$!
 
-#(testing) Update System
-sudo dnf update --refresh -y
-
 #Faster Package Downloads
 grep -qxF 'max_parallel_downloads=20' /etc/dnf/dnf.conf ||
 echo 'max_parallel_downloads=20' | sudo tee -a /etc/dnf/dnf.conf
@@ -24,6 +21,9 @@ echo 'max_parallel_downloads=20' | sudo tee -a /etc/dnf/dnf.conf
 #More Stable Downloads
 grep -qxF 'fastestmirror=False' /etc/dnf/dnf.conf || \
 echo 'fastestmirror=False' | sudo tee -a /etc/dnf/dnf.conf
+
+#(testing) Update System
+sudo dnf update --refresh -y
 
 #Create directories
 mkdir -p ~/.config/obs-studio/plugins ~/.config/kitty ~/.config/fastfetch ~/.config/MangoHud
