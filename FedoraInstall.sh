@@ -247,6 +247,9 @@ sudo udevadm trigger
 #Change computer name
 sudo hostnamectl set-hostname fedora-pc
 
+#temp fedora mesa fix ________________________________________________________________________________________________________________________________________________________________________________________________________________________
+sudo dnf downgrade mesa\*
+
 #Kill sudo loop
 kill "$SUDO_PID"
 
