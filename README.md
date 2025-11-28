@@ -7,7 +7,7 @@ This is a script made by me for Fedora, and only Fedora, to be used post install
 ## COPY AND PASTE INTO TERMINAL TO INSTALL
 
 ```bash
-sudo -v dnf install git -y
+sudo dnf install git -y
 cd ~/Downloads
 git clone https://github.com/Zutchey/FedoraPostInstallScript
 cd FedoraPostInstallScript
