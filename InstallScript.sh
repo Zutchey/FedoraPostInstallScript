@@ -26,7 +26,7 @@ echo 'fastestmirror=False' | sudo tee -a /etc/dnf/dnf.conf
 sudo dnf update --refresh -y
 
 #Create directories
-mkdir -p ~/.config/obs-studio/plugins ~/.config/kitty ~/.config/fastfetch ~/.config/MangoHud
+mkdir -p ~/.config/obs-studio/plugins ~/.config/kitty ~/.config/fastfetch ~/.config/MangoHud ~/Documents/MangoHud
 
 #Download and install OBS plugin
 wget -qO- "https://github.com/dimtpap/obs-pipewire-audio-capture/releases/download/1.2.1/linux-pipewire-audio-1.2.1.tar.gz" | \
@@ -287,7 +287,7 @@ custom_text=Session:
 exec=echo $XDG_SESSION_TYPE
 #offset=0
 
-output_folder=~/Documents
+output_folder=~/Documents/MangoHud
 log_duration=30
 autostart_log=0
 log_interval=100
