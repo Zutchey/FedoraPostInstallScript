@@ -5,8 +5,7 @@
 
 * **NOT TESTED ON NVIDIA OR INTEL GPUS!** This script primarily uses configurations favorable for **AMD** users.
 * **Fresh Install Recommended:** Running this on an existing system **might delete your already set configurations**. Proceed with caution.
-* **Sudo Password:** You may be prompted for your `sudo` password more than once.
-* **Purpose:** This script is intended to ease new users into the Linux ecosystem by automating complex setup steps.
+* **Purpose:** This script is intended to ease new users into the Linux ecosystem by automating complex setup steps. You may be prompted for your `sudo` password more than once.
 
 ---
 
