@@ -113,7 +113,7 @@ sudo systemctl enable --now docker.service
 sudo usermod -aG docker $USER
 
 #Install WinBoat (AppImage also exists)
-sudo dnf install -y https://github.com/TibixDev/winboat/releases/download/v0.8.7/winboat-0.8.7-x86_64.rpm
+sudo dnf install -y https://github.com/TibixDev/winboat/releases/download/v0.9.0/winboat-0.9.0-x86_64.rpm
 
 #Install fonts
 sudo rpm --nodigest -i https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm
