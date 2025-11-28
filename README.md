@@ -9,7 +9,7 @@
 
 ---
 
-## 1. Core System Setup & Optimization (Main Install)
+## Core Setup
 
 This main script handles foundational setup, driver configuration, and system optimizations. It must be run first.
 
