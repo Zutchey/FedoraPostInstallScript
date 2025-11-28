@@ -13,3 +13,12 @@ git clone https://github.com/Zutchey/FedoraPostInstallScript
 cd FedoraPostInstallScript
 chmod +x InstallScript.sh
 systemd-inhibit --what=idle:sleep --why="Script running" ./InstallScript.sh
+```
+
+
+## COPY AND PASTE THIS FOR ADDITIONAL SOFTWARE
+```bash
+cd ~/Downloads/FedoraPostInstallScript
+chmod +x additionalSoftware.sh
+systemd-inhibit --what=idle:sleep --why="Script running" ./additionalSoftware.sh
+```
