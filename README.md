@@ -22,7 +22,7 @@ chmod +x additionalSoftware.sh
 systemd-inhibit --what=idle:sleep --why="Script running" ./additionalSoftware.sh
 ```
 
-## DO NOT RUN THIS UNLESS YOU KNOW WHAT YOU ARE DOING
+# DO NOT RUN THIS UNLESS YOU KNOW WHAT YOU ARE DOING
 ## ADDITIONAL CONFIGURATIONS + DNS
 ```bash
 cd ~/Downloads/FedoraPostInstallScript
