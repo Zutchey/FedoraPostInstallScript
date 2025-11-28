@@ -67,7 +67,7 @@ Falcond repository: https://github.com/PikaOS-Linux/falcond
 
 ## Things to Note
 - **OBS Vulkan Layer is set globally**, so you do not need to enable it manually for Vulkan games.
-- **MangoHud is preconfigured** by the script.
+- **MangoHud is preconfigured** by the script. (Shift + F12 while in game to enable)
 
 ---
 
