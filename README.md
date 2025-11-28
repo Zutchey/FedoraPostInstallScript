@@ -1,11 +1,22 @@
-# FedoraPostInstallScript
-NOT TESTED ON NVIDIA OR INTEL GPUS!!!
+#FedoraPostInstallScript
 
-This script is meant to be run on a Fresh install of Fedora!! Can be run on non-fresh installs, though it might delete your already set configs (Not Recommended).
 
-This script is made to ease new users of Fedora into the Linux ecosystem. This script is meant to be one input for ease of use, however it may not be like that 100% of the time depending on many factors that may not be controllable. Just be aware that you may have to give your sudo password more than once on a bad day.
+## Important Warnings & Prerequisites
 
-## COPY AND PASTE INTO TERMINAL TO INSTALL
+* **NOT TESTED ON NVIDIA OR INTEL GPUS!** This script primarily uses configurations favorable for **AMD** users.
+* **Fresh Install Recommended:** Running this on an existing system **might delete your already set configurations**. Proceed with caution.
+* **Sudo Password:** You may be prompted for your `sudo` password more than once.
+* **Purpose:** This script is intended to ease new users into the Linux ecosystem by automating complex setup steps.
+
+---
+
+## 1. Core System Setup & Optimization (Main Install)
+
+This main script handles foundational setup, driver configuration, and system optimizations. It must be run first.
+
+### **Installation Instructions**
+
+Copy and paste the entire block below into your terminal to start the process:
 
 ```bash
 sudo dnf install git -y
@@ -14,14 +25,4 @@ git clone https://github.com/Zutchey/FedoraPostInstallScript
 cd FedoraPostInstallScript
 chmod +x InstallScript.sh
 systemd-inhibit --what=idle:sleep --why="Script running" ./InstallScript.sh
-```
-
-Important!!
-GAMEMODE WAS REMOVED IN FAVOR OF FALCOND BY THE SCRIPT, DO NOT TRY TO RUN A GAME WITH GAMEMODE. IT WILL NOT RUN!!!! 
-
-## COPY AND PASTE THIS FOR ADDITIONAL SOFTWARE
-```bash
-cd ~/Downloads/FedoraPostInstallScript
-chmod +x additionalSoftware.sh
-systemd-inhibit --what=idle:sleep --why="Script running" ./additionalSoftware.sh
 ```
