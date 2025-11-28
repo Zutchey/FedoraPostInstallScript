@@ -145,6 +145,7 @@ flatpak install -y flathub \
     com.vysp3r.ProtonPlus \
     io.github.ilya_zlobintsev.LACT \
     org.vinegarhq.Sober \
+    io.github.kolunmi.Bazaar 
 
 flatpak repair
 
