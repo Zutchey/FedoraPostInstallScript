@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #Log Terminal Output
-LOGFILE="/home/jesus/Downloads/FedoraPostInstallScript/additionalSoftware.log"
+LOGFILE="$HOME/Downloads/FedoraPostInstallScript/additionalSoftware.log"
 exec > >(tee -a "$LOGFILE") 2>&1
 
 #Trap Sudo
