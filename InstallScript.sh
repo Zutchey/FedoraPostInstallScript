@@ -11,6 +11,9 @@ while true; do
 done &
 SUDO_PID=$!
 
+#Kill Steam if open
+killall steam
+
 #Change computer name
 sudo hostnamectl set-hostname fedora-pc
 
