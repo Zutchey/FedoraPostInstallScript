@@ -40,6 +40,9 @@ Falcond repository: https://github.com/PikaOS-Linux/falcond
 
 ---
 
+**If you're unfamiliar with any of the packages listed below, I recommend looking into them as each is valuable enough to remain part of the core setup.**
+
+---
 ## Gaming Packages Installed
 - Steam  
 - Heroic  
