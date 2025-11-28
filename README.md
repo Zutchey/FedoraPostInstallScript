@@ -21,11 +21,3 @@ cd ~/Downloads/FedoraPostInstallScript
 chmod +x additionalSoftware.sh
 systemd-inhibit --what=idle:sleep --why="Script running" ./additionalSoftware.sh
 ```
-
-## ADDITIONAL CONFIGURATIONS + DNS
-# DO NOT RUN THIS SECTION BELOW UNLESS YOU KNOW WHAT YOU ARE DOING
-```bash
-cd ~/Downloads/FedoraPostInstallScript
-chmod +x extraConfigs.sh
-systemd-inhibit --what=idle:sleep --why="Script running" ./extraConfigs.sh
-```
