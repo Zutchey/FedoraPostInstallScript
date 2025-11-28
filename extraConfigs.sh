@@ -8,7 +8,7 @@ done &
 SUDO_PID=$!
 
 #Configure shell
-grep -qF 'pokeget random' ~/.bashrc || cat >> ~/.bashrc << 'EOF'
+grep -qF 'pokeget random' ~/.bashrc || cat << 'EOF' >> ~/.bashrc
 
 if [[ $- == *i* ]]; then
     pokeget random --hide-name | fastfetch --file-raw -
