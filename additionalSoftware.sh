@@ -24,6 +24,8 @@ sudo dnf install -y --allowerasing wallpaper-engine-kde-plugin
 sudo dnf install -y --allowerasing protontricks
 sudo dnf install -y --allowerasing htop
 sudo dnf install -y --allowerasing zsh
+sudo dnf install -y --allowerasing kitty
+
 
 #Install Flatpaks
 flatpak install -y flathub \
