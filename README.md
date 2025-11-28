@@ -75,8 +75,8 @@ Falcond repository: https://github.com/PikaOS-Linux/falcond
 
 ```bash
 cd ~/Downloads/FedoraPostInstallScript
-chmod +x extraConfigs.sh
-systemd-inhibit --what=idle:sleep --why="Script running" ./extraConfigs.sh
+chmod +x additionalSoftware.sh
+systemd-inhibit --what=idle:sleep --why="Script running" ./additionalSoftware.sh
 ```
 - Gedit
 - ani-cli
