@@ -25,3 +25,45 @@ cd FedoraPostInstallScript
 chmod +x InstallScript.sh
 systemd-inhibit --what=idle:sleep --why="Script running" ./InstallScript.sh
 ```
+---
+
+## IMPORTANT!!!!
+
+**GAMEMODE WAS REMOVED IN FAVOR OF FALCOND.**  
+Attempting to run a game with Gamemode will **not** work and the game **will not launch**.  
+Falcond repository: https://github.com/PikaOS-Linux/falcond
+
+---
+
+## Linux App Store
+- **Bazaar** (Recommended for new Linux users)
+
+---
+
+## Gaming Packages Installed
+- Steam  
+- Heroic  
+- Lutris  
+- Bottles  
+- ProtonPlus (for installing Proton-GE)
+
+---
+
+## Important Packages
+- GPU Screen Recorder  
+- Discord  
+- OBS (with custom plugins)  
+- Winboat (for Windows applications that don't run through Wine)  
+- BTRFS Assistant (Snapshots)  
+- MangoHud / GOverlay  
+- Gear Lever (for AppImages)  
+- Flatseal  
+- LACT (GPU overclocking)
+
+---
+
+## Things to Note
+- **OBS Vulkan Layer is set globally**, so you do not need to enable it manually for Vulkan games.
+- **MangoHud is preconfigured** by the script.
+
+---
