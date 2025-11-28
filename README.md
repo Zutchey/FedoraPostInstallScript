@@ -1,4 +1,4 @@
-#FedoraPostInstallScript
+## FedoraPostInstallScript
 
 
 ## Important Warnings & Prerequisites
