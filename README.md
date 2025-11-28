@@ -15,10 +15,17 @@ chmod +x InstallScript.sh
 systemd-inhibit --what=idle:sleep --why="Script running" ./InstallScript.sh
 ```
 
-
 ## COPY AND PASTE THIS FOR ADDITIONAL SOFTWARE
 ```bash
 cd ~/Downloads/FedoraPostInstallScript
 chmod +x additionalSoftware.sh
 systemd-inhibit --what=idle:sleep --why="Script running" ./additionalSoftware.sh
+```
+
+## DO NOT RUN THIS UNLESS YOU KNOW WHAT YOU ARE DOING
+## ADDITIONAL CONFIGURATIONS + DNS
+```bash
+cd ~/Downloads/FedoraPostInstallScript
+chmod +x extraConfigs.sh
+systemd-inhibit --what=idle:sleep --why="Script running" ./extraConfigs.sh
 ```
