@@ -1,8 +1,7 @@
 # FedoraPostInstallScript
 NOT TESTED ON NVIDIA OR INTEL GPUS!!!
 
-This is a script made by me for Fedora, and only Fedora, to be used post install. It is based on my own preferences of how I prefer my Fedora system. This script is made so that the user only has to give one input and the script does the rest.
-
+This script is made to ease new users of Fedora into the Linux ecosystem. This script is meant to be one input for ease of use, however it may not be like that 100% of the time depending on many factors that may not be controllable. Just be aware that you may have to give your sudo password more than once on a bad day.
 
 ## COPY AND PASTE INTO TERMINAL TO INSTALL
 
@@ -14,6 +13,8 @@ cd FedoraPostInstallScript
 chmod +x InstallScript.sh
 systemd-inhibit --what=idle:sleep --why="Script running" ./InstallScript.sh
 ```
+
+Imp
 
 ## COPY AND PASTE THIS FOR ADDITIONAL SOFTWARE
 ```bash
