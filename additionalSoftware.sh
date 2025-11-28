@@ -11,6 +11,10 @@ while true; do
 done &
 SUDO_PID=$!
 
+#Enable Copr Repos
+sudo dnf copr enable -y derisis13/ani-cli
+sudo dnf copr enable -y kylegospo/wallpaper-engine-kde-plugin
+
 #Install Native Software
 sudo dnf install -y --allowerasing --refresh gedit
 sudo dnf install -y --allowerasing ani-cli
