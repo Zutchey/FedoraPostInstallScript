@@ -26,7 +26,9 @@ grep -qxF 'fastestmirror=False' /etc/dnf/dnf.conf || \
 echo 'fastestmirror=False' | sudo tee -a /etc/dnf/dnf.conf
 
 #(testing) Update System
+sudo -v
 sudo dnf update --refresh -y
+sudo -v
 
 #Create directories
 mkdir -p ~/.config/obs-studio/plugins ~/.config/kitty ~/.config/fastfetch ~/.config/MangoHud ~/Documents/MangoHud
@@ -335,22 +337,6 @@ kill "$SUDO_PID"
 #Enable Steam h.264 (Auto closes after 2 minutes)
 steam steam://unlockh264/ & sleep 120; kill $(pgrep steam)
 
-echo "Setup complete! Reboot recommended."
-while true; do
-    printf "Reboot now? (y/n) "
-    read REPLY
-
-    case "$REPLY" in
-        [Yy])
-            reboot
-            break
-            ;;
-        [Nn])
-            echo "Not rebooting."
-            break
-            ;;
-        *)
-            echo "Invalid input. Please enter y or n."
-            ;;
-    esac
-done
+echo "Setup complete! Rebooting in 30 seconds."
+sleep 30
+sudo reboot
