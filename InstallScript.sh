@@ -39,15 +39,24 @@ sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub
 sudo dnf install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release -y
 sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
 
+#Core
+sudo dnf group upgrade core -y
+
 #Multimedia Codecs
 sudo dnf swap ffmpeg-free ffmpeg --allowerasing -y
-sudo dnf update @multimedia --setopt="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin -y
 sudo dnf swap mesa-va-drivers mesa-va-drivers-freeworld -y
 sudo dnf swap mesa-vdpau-drivers mesa-vdpau-drivers-freeworld -y
 sudo dnf swap mesa-vulkan-drivers mesa-vulkan-drivers-freeworld -y
 sudo dnf swap mesa-va-drivers.i686 mesa-va-drivers-freeworld.i686 -y
 sudo dnf swap mesa-vdpau-drivers.i686 mesa-vdpau-drivers-freeworld.i686 -y
 sudo dnf swap mesa-vulkan-drivers.i686 mesa-vulkan-drivers-freeworld.i686 -y
+
+#Still Codecs (From Fedora-Noble-Setup)
+sudo dnf install -y gstreamer1-plugins-{bad-\*,good-\*,base} \
+  gstreamer1-plugin-openh264 gstreamer1-libav lame\* \
+  --exclude=gstreamer1-plugins-bad-free-devel
+sudo dnf group install -y multimedia
+sudo dnf group install -y sound-and-video
 
 #Install packages
 sudo dnf install -y --allowerasing --refresh steam
@@ -92,9 +101,11 @@ sudo dnf install -y --allowerasing libcurl-devel
 sudo dnf install -y --allowerasing mesa-libGLU
 sudo dnf install -y --allowerasing freerdp
 sudo dnf install -y --allowerasing libva-utils
+sudo dnf install -y --allowerasing p7zip
+sudo dnf install -y --allowerasing p7zip-plugins
+sudo dnf install -y --allowerasing unrar
+sudo dnf install -y --allowerasing btrbk
 
-#Install Core
-sudo dnf group install core -y
 
 #Enable services
 sudo systemctl enable --now falcond
@@ -142,6 +153,9 @@ flatpak override --user --filesystem=/home/$USER/.icons/:ro
 flatpak override --user --filesystem=/usr/share/icons/:ro
 flatpak override --user --env=XCURSOR_PATH=$HOME/.icons
 flatpak override --user --filesystem=xdg-config/MangoHud:ro
+
+#Dual Boot Time Fix
+sudo timedatectl set-local-rtc 0 --adjust-system-clock
 
 #Enable Wine NTsync
 cat << EOF | sudo tee /etc/modules-load.d/ntsync.conf > /dev/null
