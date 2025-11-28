@@ -70,3 +70,31 @@ Falcond repository: https://github.com/PikaOS-Linux/falcond
 - **MangoHud is preconfigured** by the script.
 
 ---
+
+## Optional Additional Applications
+
+```bash
+cd ~/Downloads/FedoraPostInstallScript
+chmod +x extraConfigs.sh
+systemd-inhibit --what=idle:sleep --why="Script running" ./extraConfigs.sh
+```
+- Gedit
+- ani-cli
+- qBittorrent
+- Gapless
+- Protontricks
+- htop
+- kitty
+- LocalSend
+- Spotify
+- Keypunch
+- Parabolic
+- Upscaler
+- Morphosis
+- Handbrake
+- ProtonVPN
+- osu!
+- Warehouse
+- Faugus
+
+
