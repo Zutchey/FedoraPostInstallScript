@@ -27,7 +27,9 @@ echo 'fastestmirror=False' | sudo tee -a /etc/dnf/dnf.conf
 
 #(testing) Update System
 sudo -v
-sudo dnf update --refresh -y
+sudo dnf update --refresh -y --downloadonly
+sudo -v
+sudo dnf upgrade -y
 sudo -v
 
 #Create directories
