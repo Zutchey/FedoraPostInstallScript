@@ -8,7 +8,7 @@ done &
 SUDO_PID=$!
 
 #Configure shell
-grep -qF 'alias system-update' ~/.bashrc || cat << 'EOF' >> ~/.bashrc
+grep -qF 'pokeget random' ~/.bashrc || cat >> ~/.bashrc << 'EOF'
 
 if [[ $- == *i* ]]; then
     pokeget random --hide-name | fastfetch --file-raw -
@@ -81,7 +81,7 @@ cat << 'EOF' > ~/.config/fastfetch/config.jsonc
 EOF
 
 #Adding dns
-sudo dnf install dnsconfd
+sudo dnf install dnsconfd -y
 
 sudo systemctl disable --now systemd-resolved
 sudo systemctl mask systemd-resolved
