@@ -11,6 +11,9 @@ while true; do
 done &
 SUDO_PID=$!
 
+#Change computer name
+sudo hostnamectl set-hostname fedora-pc
+
 #Faster Package Downloads
 grep -qxF 'max_parallel_downloads=20' /etc/dnf/dnf.conf ||
 echo 'max_parallel_downloads=20' | sudo tee -a /etc/dnf/dnf.conf
@@ -35,8 +38,6 @@ sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub
 #Add repositories
 sudo dnf install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release -y
 sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
-sudo dnf copr enable -y derisis13/ani-cli
-sudo dnf copr enable -y kylegospo/wallpaper-engine-kde-plugin
 
 #Multimedia Codecs
 sudo dnf swap ffmpeg-free ffmpeg --allowerasing -y
@@ -50,24 +51,20 @@ sudo dnf swap mesa-vulkan-drivers.i686 mesa-vulkan-drivers-freeworld.i686 -y
 
 #Install packages
 sudo dnf install -y --allowerasing --refresh steam
-sudo dnf install -y --allowerasing ani-cli 
 sudo dnf install -y --allowerasing cargo
 sudo dnf install -y --allowerasing java
 sudo dnf install -y --allowerasing fastfetch
-sudo dnf install -y --allowerasing gedit
 sudo dnf install -y --allowerasing pavucontrol
 sudo dnf install -y --allowerasing kitty
 sudo dnf install -y --allowerasing gnome-disk-utility
 sudo dnf install -y --allowerasing gimp
 sudo dnf install -y --allowerasing vlc
 sudo dnf install -y --allowerasing heroic
-sudo dnf install -y --allowerasing gnome-boxes
 sudo dnf install -y --allowerasing mpv
 sudo dnf install -y --allowerasing curl
 sudo dnf install -y --allowerasing cabextract
 sudo dnf install -y --allowerasing xorg-x11-font-utils
 sudo dnf install -y --allowerasing fontconfig
-sudo dnf install -y --allowerasing qbittorrent
 sudo dnf install -y --allowerasing obs-studio
 sudo dnf install -y --allowerasing umu-launcher
 sudo dnf install -y --allowerasing lutris
@@ -75,18 +72,13 @@ sudo dnf install -y --allowerasing goverlay
 sudo dnf install -y --allowerasing mangohud
 sudo dnf install -y --allowerasing docker
 sudo dnf install -y --allowerasing docker-compose
-sudo dnf install -y --allowerasing testdisk
 sudo dnf install -y --allowerasing winetricks
 sudo dnf install -y --allowerasing wine
 sudo dnf install -y --allowerasing wine-core
 sudo dnf install -y --allowerasing falcond
 sudo dnf install -y --allowerasing gnome-tweaks
-sudo dnf install -y --allowerasing g4music
 sudo dnf install -y --allowerasing kdenlive
 sudo dnf install -y --allowerasing krita
-sudo dnf install -y --allowerasing wallpaper-engine-kde-plugin
-sudo dnf install -y --allowerasing protontricks
-sudo dnf install -y --allowerasing htop
 sudo dnf install -y --allowerasing obs-studio-plugin-vkcapture
 sudo dnf install -y --allowerasing cpu-x
 sudo dnf install -y --allowerasing pokeget
@@ -100,7 +92,6 @@ sudo dnf install -y --allowerasing libcurl-devel
 sudo dnf install -y --allowerasing mesa-libGLU
 sudo dnf install -y --allowerasing freerdp
 sudo dnf install -y --allowerasing libva-utils
-sudo dnf install -y --allowerasing zsh
 
 #Install Core
 sudo dnf group install core -y
@@ -133,16 +124,8 @@ flatpak install -y flathub \
     it.mijorus.gearlever \
     org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/25.08 \
     io.missioncenter.MissionCenter \
-    org.localsend.localsend_app \
-    com.spotify.Client \
-    dev.bragefuglseth.Keypunch \
-    org.nickvision.tubeconverter \
     com.dec05eba.gpu_screen_recorder \
-    io.gitlab.theevilskeleton.Upscaler \
-    garden.jamie.Morphosis \
     com.github.wwmm.easyeffects \
-    fr.handbrake.ghb \
-    com.protonvpn.www \
     io.github.sigmasd.stimulator \
     com.mattjakeman.ExtensionManager \
     ca.desrt.dconf-editor \
@@ -150,11 +133,7 @@ flatpak install -y flathub \
     com.github.tchx84.Flatseal \
     com.vysp3r.ProtonPlus \
     io.github.ilya_zlobintsev.LACT \
-    com.valvesoftware.Steam.CompatibilityTool.Proton-GE \
-    org.azahar_emu.Azahar \
     org.vinegarhq.Sober \
-    io.github.ryubing.Ryujinx \
-    sh.ppy.osu
 
 flatpak repair
 
@@ -328,9 +307,6 @@ EOF
 # Reload udev rules
 sudo udevadm control --reload-rules
 sudo udevadm trigger
-
-#Change computer name
-sudo hostnamectl set-hostname fedora-pc
 
 #temp mesa fix
 sudo dnf downgrade -y mesa\*
