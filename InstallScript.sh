@@ -14,9 +14,6 @@ SUDO_PID=$!
 #Kill Steam if open
 killall steam
 
-#Change computer name
-sudo hostnamectl set-hostname fedora-pc
-
 #Faster Package Downloads
 grep -qxF 'max_parallel_downloads=20' /etc/dnf/dnf.conf ||
 echo 'max_parallel_downloads=20' | sudo tee -a /etc/dnf/dnf.conf
