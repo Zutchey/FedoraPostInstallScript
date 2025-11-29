@@ -62,6 +62,7 @@ Falcond repository: https://github.com/PikaOS-Linux/falcond
 - Gear Lever (for AppImages)  
 - Flatseal  
 - LACT (GPU overclocking)
+- Mission Center (Linux's Task Manager)
 
 ---
 
