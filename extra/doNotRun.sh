@@ -7,6 +7,9 @@ while true; do
 done &
 SUDO_PID=$!
 
+#Change computer name
+sudo hostnamectl set-hostname fedora-pc
+
 #Configure shell
 grep -qF 'pokeget random' ~/.bashrc || cat << 'EOF' >> ~/.bashrc
 
