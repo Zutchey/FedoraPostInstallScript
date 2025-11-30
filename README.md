@@ -3,19 +3,20 @@
 
 ## Important Warnings & Prerequisites
 
-* **NOT TESTED ON NVIDIA OR INTEL GPUS!** This script primarily uses configurations favorable for **AMD** users.
-* **Fresh Install Recommended:** Running this on an existing system **might delete your already set configurations**. Proceed with caution.
-* **Purpose:** This script is intended to ease new users into Fedora Linux by automating setup steps. This script is meant to be a one input plug and play script, however you may be prompted for your `sudo` password more than once, due to sudo timeout.
+* **NOT TESTED ON NVIDIA OR INTEL GPUS!** This Script Was Specifically Made With AMD In Mind.
+* **Fresh Install Recommended:** Proceed with caution. Running This On An Existing System **Might Delete You Already Set Configurations**.
+* **Purpose:** This Script Is Intended To Ease New Users Into Fedora Linux By Automating Setup Steps. This Script Is Meant To Be A One Input Plug And Play Script, However You May Be Prompted For Your `sudo` Password More Than Once, Due To Sudo Timeout.
 
 ---
 
 ## Core Setup
 
-This main script handles foundational setup, driver configuration, and system optimizations. It must be run first.
+This Main Script Handles Updating System, Enabling Repositories, Proper Codec Installation, Package Installation, And A Few Tweaks. The Second Script Is Optimal And Only Contains Additional Applications
 
 ### **Installation Instructions**
 
-Copy and paste the entire block below into your terminal to start the process:
+Copy And Paste Block Below Into Your Terminal And Let The Magic Happen:
+**(CTRL + SHIFT + V TO PASTE INTO TERMINAL)**
 
 ```bash
 sudo dnf install git -y
@@ -29,46 +30,63 @@ systemd-inhibit --what=idle:sleep --why="Script running" ./InstallScript.sh
 
 ## IMPORTANT!!!!
 
-**GAMEMODE WAS REMOVED IN FAVOR OF FALCOND.**  
-Attempting to run a game with Gamemode will **not** work and the game **will not launch**.  
-Falcond repository: https://github.com/PikaOS-Linux/falcond
+**GAMEMODE WAS REMOVED IN FAVOR OF FALCOND**  
+Attempting To Run A Game With Gamemode Will **Not** Workd And The Game **Will Not Launch**
+Falcond Repository: https://github.com/PikaOS-Linux/falcond
 
 ---
 
 ## Linux App Store
-- **Bazaar** (Recommended for new Linux users)
+- **Bazaar** (Recommended For New Linux Users)
 
 ---
 
-**If you're unfamiliar with any of the packages listed below, I recommend looking into them as each is valuable enough to remain part of the core setup.**
+**If You're Unfamiliar With Any Of The Applications Listed Below, I Recommend Looking Into Them As Each Has Enough Value To Me To Remain Part Of The Core Setup**
 
 ---
-## Gaming Packages Installed
+## Gaming Applications Installed
 - Steam  
 - Heroic  
 - Lutris  
 - Bottles  
-- ProtonPlus (for installing Proton-GE)
+- ProtonPlus (For Installing Proton-GE)
 
 ---
 
-## Important Packages
-- GPU Screen Recorder  
-- Discord  
-- OBS (with custom plugins)  
-- Winboat (for Windows applications that don't run through Wine)  
-- BTRFS Assistant (Snapshots)  
-- MangoHud / GOverlay  
-- Gear Lever (for AppImages)  
-- Flatseal  
-- LACT (GPU overclocking)
+## Important Applications
+- GPU Screen Recorder (Better Shadow Play)
+- Discord (Discord)
+- OBS (With Custom Plugins)  
+- Winboat (For Windows Applications That Don't Run Through Wine)  
+- BTRFS Assistant (System Snapshots)  
+- MangoHud/Goverlay (Performance Overlay)
+- Gear Lever (For AppImages)  
+- Flatseal (Managing Flatpak permissions)
+- LACT (GPU Overclocking)
 - Mission Center (Linux's Task Manager)
 
 ---
 
+## Other Applications
+- Disks//Gnome Disk Utility (Disk Manager)
+- Krita (Painting)
+- Kdenlive (Video Editor)
+- Sober (Roblox)
+- Easy Effects (Auio Processor)
+- Extension Manager (Make Gnome Usable)
+
+---
+
 ## Things to Note
-- **OBS Vulkan Layer is set globally**, so you do not need to enable it manually for Vulkan games.
-- **MangoHud is preconfigured** by the script. (Shift + F12 while in game to enable)
+- **OBS Vulkan Layer Is Set Globally**, So You Do Not Need To Enable It Manually For Vulkan Games
+- **MangoHud Is Preconfigured** By The Script
+- **MangoHud**: Right Shift + F12 While In Game To Enable / Left Shift + F2 To Log That Data Into ~/Documents/MangoHud
+- Windows Fonts Installed
+- BTRFS Assistant Is A Life Saver, Especially For New Users
+- Games Probably Will Not Launch If Installed On NFTS Drives
+- Use Proton-GE Whenever Available
+- On Steam, I Would Recommend Turning On Background Processing Of Vulkan Shaders Under Download Settings
+- Using Disks Is The Simplest Way, IMO, To Auto Mount Drives On Boot
 
 ---
 
