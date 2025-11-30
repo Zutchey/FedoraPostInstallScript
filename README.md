@@ -11,7 +11,7 @@
 
 ## Core Setup
 
-This Main Script Handles Updating System, Enabling Repositories, Proper Codec Installation, Package Installation, And A Few Tweaks. The Second Script Is Optimal And Only Contains Additional Applications
+This Main Script Handles Updating System, Enabling Repositories, Proper Codec Installation, Package Installation, And A Few Tweaks. The Second Script Is Optional And Only Contains Additional Applications
 
 ### **Installation Instructions**
 
