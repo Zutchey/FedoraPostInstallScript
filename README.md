@@ -56,7 +56,7 @@ systemd-inhibit --what=idle:sleep --why="Script running" ./InstallScript.sh
 ## Important Applications
 - GPU Screen Recorder (Better Shadow Play)
 - Discord (Discord)
-- OBS (With Custom Plugins)  
+- OBS (OBS)  
 - Winboat (For Windows Applications That Don't Run Through Wine)  
 - BTRFS Assistant (System Snapshots)  
 - MangoHud/Goverlay (Performance Overlay)
@@ -87,6 +87,7 @@ systemd-inhibit --what=idle:sleep --why="Script running" ./InstallScript.sh
 - Use Proton-GE Whenever Available
 - On Steam, I Would Recommend Turning On Background Processing Of Vulkan Shaders Under Download Settings
 - Using Disks Is The Simplest Way, IMO, To Auto Mount Drives On Boot
+- My Game Launcher Prio: Steam For Games In Steam Store -> Heroic For Games In GOG Or Epic Stores -> Lutris And/Or Bottles (Based On Personal Preference) For Other Launchers, Games Without Launchers, And Sea Sailing Games
 
 ---
 
