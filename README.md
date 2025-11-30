@@ -16,6 +16,7 @@ This Main Script Handles Updating System, Enabling Repositories, Proper Codec In
 ### **Installation Instructions**
 
 Copy And Paste Block Below Into Your Terminal And Let The Magic Happen:
+
 **(CTRL + SHIFT + V TO PASTE INTO TERMINAL)**
 
 ```bash
