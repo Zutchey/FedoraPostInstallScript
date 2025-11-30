@@ -78,7 +78,7 @@ systemd-inhibit --what=idle:sleep --why="Script running" ./InstallScript.sh
 ---
 
 ## Things to Note
-- **OBS Vulkan Layer And MangoHud Are Set Globally**, So You Do Not Need To Enable It Manually For Vulkan Games
+- **OBS Vulkan Layer And MangoHud Are Set Globally**, So You Do Not Need To Enable Them Manually For Vulkan Games
 - **MangoHud Is Preconfigured** By The Script
 - **MangoHud**: Right Shift + F12 While In Game To Enable / Left Shift + F2 To Log That Data Into ~/Documents/MangoHud
 - Windows Fonts Installed
