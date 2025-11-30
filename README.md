@@ -16,8 +16,7 @@ This Main Script Handles Updating System, Enabling Repositories, Proper Codec In
 ### **Installation Instructions**
 
 Copy And Paste Block Below Into Your Terminal And Let The Magic Happen:
-
-**(CTRL + SHIFT + V TO PASTE INTO TERMINAL)**
+* **(CTRL + SHIFT + V TO PASTE INTO TERMINAL)**
 
 ```bash
 sudo dnf install git -y
@@ -32,8 +31,8 @@ systemd-inhibit --what=idle:sleep --why="Script running" ./InstallScript.sh
 ## IMPORTANT!!!!
 
 **GAMEMODE WAS REMOVED IN FAVOR OF FALCOND**  
-Attempting To Run A Game With Gamemode Will **Not** Workd And The Game **Will Not Launch**.
-Falcond Repository: https://github.com/PikaOS-Linux/falcond
+* Attempting To Run A Game With Gamemode Will **Not** Workd And The Game **Will Not Launch**.
+* Falcond Repository: https://github.com/PikaOS-Linux/falcond
 
 ---
 
