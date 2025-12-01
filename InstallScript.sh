@@ -223,7 +223,7 @@ exec=echo $XDG_SESSION_TYPE
 #offset=0
 
 output_folder=~/Documents/MangoHud
-log_duration=30
+log_duration=180
 autostart_log=0
 log_interval=100
 toggle_logging=Shift_L+F2
