@@ -157,6 +157,7 @@ flatpak override --user --filesystem=/home/$USER/.icons/:ro
 flatpak override --user --filesystem=/usr/share/icons/:ro
 flatpak override --user --env=XCURSOR_PATH=$HOME/.icons
 flatpak override --user --filesystem=xdg-config/MangoHud:ro
+flatpak override --user --device=input org.vinegarhq.Sober
 
 #Dual Boot Time Fix
 sudo timedatectl set-local-rtc 0 --adjust-system-clock
