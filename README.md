@@ -79,8 +79,7 @@ systemd-inhibit --what=idle:sleep --why="Script running" ./InstallScript.sh
 
 ## Things to Note
 - **OBS Vulkan Layer And MangoHud Are Set Globally**, So You Do Not Need To Enable Them Manually For Vulkan Games
-- **MangoHud Is Preconfigured** By The Script
-- **MangoHud**: Right Shift + F12 While In Game To Enable / Left Shift + F2 To Log That Data Into ~/Documents/MangoHud
+- **MangoHud Is Preconfigured** By The Script; Right Shift + F12 While In Game To Enable / Left Shift + F2 To Log That Data Into ~/Documents/MangoHud
 - Windows Fonts Installed
 - BTRFS Assistant Is A Life Saver, Especially For New Users
 - Games Probably Will Not Launch If Installed On NFTS Drives
