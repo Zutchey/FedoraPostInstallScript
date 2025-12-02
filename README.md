@@ -37,7 +37,8 @@ systemd-inhibit --what=idle:sleep --why="Script running" ./InstallScript.sh
 ---
 
 ## Linux App Store
-- **Bazaar** (Recommended For New Linux Users) (Native Packages Will Not Show Up Here; e.g. Steam)
+- **Bazaar** (Recommended For New Linux Users)
+- Only Flatpaks Will Show Up Here, **Steam Will Not Show Up As Downloaded**
 
 ---
 
@@ -45,35 +46,35 @@ systemd-inhibit --what=idle:sleep --why="Script running" ./InstallScript.sh
 
 ---
 ## Gaming Applications Installed
-- Steam  
-- Heroic  
-- Lutris  
-- Bottles  
-- ProtonPlus (For Installing Proton-GE)
+- Steam (**Native**)
+- Heroic (**Native**)
+- Lutris (**Native**)
+- Bottles (**Flatpak**)
+- ProtonPlus (For Installing Proton-GE) (**Flatpak**)
 
 ---
 
 ## Important Applications
-- GPU Screen Recorder (Better Shadow Play)
-- Discord (Discord)
-- OBS (OBS)  
-- Winboat (For Windows Applications That Don't Run Through Wine)  
-- BTRFS Assistant (System Snapshots)  
-- MangoHud/Goverlay (Performance Overlay)
-- Gear Lever (For AppImages)  
-- Flatseal (Managing Flatpak permissions)
-- LACT (GPU Overclocking)
-- Mission Center (Linux's Task Manager)
+- GPU Screen Recorder (Better Shadow Play) (**Flatpak**)
+- Discord (Discord) (**Native**)
+- OBS (OBS) (**Native**)
+- Winboat (For Windows Applications That Don't Run Through Wine) (**.rpm File**)
+- BTRFS Assistant (System Snapshots) (**Native**)
+- MangoHud/Goverlay (Performance Overlay) (**Native**)
+- Gear Lever (For AppImages) (**Flatpak**)
+- Flatseal (Managing Flatpak permissions) (**Flatpak**)
+- LACT (GPU Overclocking) (**Flatpak**)
+- Mission Center (Linux's Task Manager) (**Flatpak**)
 
 ---
 
 ## Other Applications
-- Disks//Gnome Disk Utility (Disk Manager)
-- Krita (Painting)
-- Kdenlive (Video Editor)
-- Sober (Roblox)
-- Easy Effects (Auio Processor)
-- Extension Manager (Make Gnome Usable)
+- Disks//Gnome Disk Utility (Disk Manager) (**Native**)
+- Krita (Painting) (**Native**)
+- Kdenlive (Video Editor) (**Native**)
+- Sober (Roblox) (**Flatpak**)
+- Easy Effects (Auio Processor) (**Flatpak**)
+- Extension Manager (Make Gnome Usable) (**Flatpak**)
 
 ---
 
