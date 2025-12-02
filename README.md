@@ -37,7 +37,7 @@ systemd-inhibit --what=idle:sleep --why="Script running" ./InstallScript.sh
 ---
 
 ## Linux App Store
-- **Bazaar** (Recommended For New Linux Users)
+- **Bazaar** (Recommended For New Linux Users) (Native Packages Will Not Show Up Here; e.g. Steam)
 
 ---
 
