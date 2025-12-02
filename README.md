@@ -4,7 +4,7 @@
 ## Important Warnings & Prerequisites
 
 * **NOT TESTED ON NVIDIA OR INTEL GPUS!** This Script Was Specifically Made With AMD In Mind.
-* **Fresh Install Recommended:** Proceed with caution. Running This On An Existing System **Might Delete You Already Set Configurations**.
+* **Fresh Install Recommended:** Proceed with caution. Running This On An Existing System **Might Delete Your Already Set Configurations**.
 * **Purpose:** This Script Is Intended To Ease New Users Into Fedora Linux By Automating Setup Steps. This Script Is Meant To Be A One Input Plug And Play Script, However You May Be Prompted For Your `sudo` Password More Than Once, Due To Sudo Timeout.
 
 ---
