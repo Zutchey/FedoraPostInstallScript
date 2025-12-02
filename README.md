@@ -33,6 +33,7 @@ systemd-inhibit --what=idle:sleep --why="Script running" ./InstallScript.sh
 **GAMEMODE WAS REMOVED IN FAVOR OF FALCOND**  
 * Attempting To Run A Game With Gamemode Will **Not** Workd And The Game **Will Not Launch**.
 * Falcond Repository: https://github.com/PikaOS-Linux/falcond
+* (**Do Not Use "gamemoderun %command%" On Steam**)
 
 ---
 
