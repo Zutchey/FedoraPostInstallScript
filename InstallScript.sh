@@ -172,6 +172,13 @@ grep -qF 'alias system-update' ~/.bashrc || cat << 'EOF' >> ~/.bashrc
 export PATH="$HOME/.cargo/bin:$PATH"
 
 alias system-update='sudo dnf update -y --refresh && flatpak update -y'
+
+alias mesa-git-install='sudo dnf copr enable xxmitsu/mesa-git -y && sudo dnf swap mesa-vulkan-drivers-freeworld mesa-vulkan-drivers -y && sudo dnf copr disable xxmitsu/mesa-git -y && echo "Reboot Recommended"'
+
+alias mesa-git-remove='sudo dnf swap mesa-vulkan-drivers mesa-vulkan-drivers-freeworld -y && echo "Reboot Recommended"'
+
+alias mesa-git-update='sudo dnf copr enable xxmitsu/mesa-git -y && sudo dnf update mesa-vulkan-drivers -y && sudo dnf copr disable xxmitsu/mesa-git -y && echo "Reboot Recommended"'
+
 EOF
 
 #Configure MangoHud
