@@ -133,7 +133,7 @@ echo 'MANGOHUD=1' | sudo tee -a /etc/environment
 gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize,close"
 
 #Install flatpaks
-flatpak install -y flathub \
+flatpak install -y flathub --noninteractive \
     com.usebottles.bottles \
     it.mijorus.gearlever \
     org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/25.08 \
