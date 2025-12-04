@@ -38,6 +38,8 @@ tar -xzf - -C ~/.config/obs-studio/plugins
 
 #Add Flathub Flatpaks
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak install --reinstall flathub $(flatpak list --app-runtime=org.fedoraproject.Platform --columns=application | tail -n +1 ) -y
+sudo flatpak remote-delete fedora
 
 #Add repositories
 sudo dnf install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release -y
@@ -109,7 +111,6 @@ sudo dnf install -y --allowerasing p7zip-plugins
 sudo dnf install -y --allowerasing unrar
 sudo dnf install -y --allowerasing btrbk
 
-
 #Enable services
 sudo systemctl enable --now falcond
 sudo systemctl enable --now docker.service
@@ -132,33 +133,6 @@ echo 'MANGOHUD=1' | sudo tee -a /etc/environment
 #Gnome Changes
 gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize,close"
 
-#Install flatpaks
-flatpak install -y flathub --noninteractive \
-    com.usebottles.bottles \
-    it.mijorus.gearlever \
-    org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/25.08 \
-    io.missioncenter.MissionCenter \
-    com.dec05eba.gpu_screen_recorder \
-    com.github.wwmm.easyeffects \
-    io.github.sigmasd.stimulator \
-    com.mattjakeman.ExtensionManager \
-    ca.desrt.dconf-editor \
-    io.github.flattool.Ignition \
-    com.github.tchx84.Flatseal \
-    com.vysp3r.ProtonPlus \
-    io.github.ilya_zlobintsev.LACT \
-    org.vinegarhq.Sober \
-    io.github.kolunmi.Bazaar 
-
-flatpak repair
-
-#Flatpak Permission Fixes
-flatpak override --user --filesystem=/home/$USER/.icons/:ro
-flatpak override --user --filesystem=/usr/share/icons/:ro
-flatpak override --user --env=XCURSOR_PATH=$HOME/.icons
-flatpak override --user --filesystem=xdg-config/MangoHud:ro
-flatpak override --user --device=input org.vinegarhq.Sober
-
 #Dual Boot Time Fix
 sudo timedatectl set-local-rtc 0 --adjust-system-clock
 
@@ -178,7 +152,6 @@ alias mesa-git-install='sudo dnf copr enable xxmitsu/mesa-git -y && sudo dnf swa
 alias mesa-git-remove='sudo dnf swap mesa-vulkan-drivers mesa-vulkan-drivers-freeworld -y && echo "Reboot Recommended"'
 
 alias mesa-git-update='sudo dnf copr enable xxmitsu/mesa-git -y && sudo dnf update mesa-vulkan-drivers -y && sudo dnf copr disable xxmitsu/mesa-git -y && echo "Reboot Recommended"'
-
 EOF
 
 #Configure MangoHud
@@ -268,6 +241,33 @@ sudo udevadm trigger
 
 #temp mesa fix
 sudo dnf downgrade -y mesa\*
+
+#Install flatpaks
+flatpak install -y flathub --noninteractive \
+    com.usebottles.bottles \
+    it.mijorus.gearlever \
+    org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/25.08 \
+    io.missioncenter.MissionCenter \
+    com.dec05eba.gpu_screen_recorder \
+    com.github.wwmm.easyeffects \
+    io.github.sigmasd.stimulator \
+    com.mattjakeman.ExtensionManager \
+    ca.desrt.dconf-editor \
+    io.github.flattool.Ignition \
+    com.github.tchx84.Flatseal \
+    com.vysp3r.ProtonPlus \
+    io.github.ilya_zlobintsev.LACT \
+    org.vinegarhq.Sober \
+    io.github.kolunmi.Bazaar 
+
+flatpak repair
+
+#Flatpak Permission Fixes
+flatpak override --user --filesystem=/home/$USER/.icons/:ro
+flatpak override --user --filesystem=/usr/share/icons/:ro
+flatpak override --user --env=XCURSOR_PATH=$HOME/.icons
+flatpak override --user --filesystem=xdg-config/MangoHud:ro
+flatpak override --user --device=input org.vinegarhq.Sober
 
 #Kill sudo loop
 kill "$SUDO_PID"
