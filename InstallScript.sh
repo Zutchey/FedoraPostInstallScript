@@ -30,7 +30,17 @@ sudo dnf upgrade -y
 sudo -v
 
 #Create directories
-mkdir -p ~/.config/obs-studio/plugins ~/.config/kitty ~/.config/fastfetch ~/.config/MangoHud ~/Documents/MangoHud
+mkdir -p ~/.config/obs-studio/plugins ~/.config/kitty ~/.config/fastfetch ~/.config/MangoHud ~/Documents/MangoHud ~/.config/FedoraPostInstallScript
+
+#Move Mesa Git Scripts
+mv ~/Downloads/FedoraPostInstallScript/extra/mesa-git-install.sh ~/.config/FedoraPostInstallScript
+mv ~/Downloads/FedoraPostInstallScript/extra/mesa-git-remove.sh ~/.config/FedoraPostInstallScript
+mv ~/Downloads/FedoraPostInstallScript/extra/mesa-git-update.sh ~/.config/FedoraPostInstallScript
+
+#Make Them Executable
+chmod +x ~/.config/FedoraPostInstallScript/mesa-git-install.sh
+chmod +x ~/.config/FedoraPostInstallScript/mesa-git-remove.sh
+chmod +x ~/.config/FedoraPostInstallScript/mesa-git-update.sh
 
 #Download and install OBS plugin
 wget -qO- "https://github.com/dimtpap/obs-pipewire-audio-capture/releases/download/1.2.1/linux-pipewire-audio-1.2.1.tar.gz" | \
@@ -147,11 +157,11 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 alias system-update='sudo dnf update -y --refresh && flatpak update -y'
 
-alias mesa-git-install='sudo dnf copr enable xxmitsu/mesa-git -y && sudo dnf swap mesa-vulkan-drivers-freeworld mesa-vulkan-drivers -y && sudo dnf copr disable xxmitsu/mesa-git -y && echo "Reboot Recommended"'
+alias mesa-git-install='~/.config/FedoraPostInstallScript/mesa-git-install.sh'
 
-alias mesa-git-remove='sudo dnf swap mesa-vulkan-drivers mesa-vulkan-drivers-freeworld -y && echo "Reboot Recommended"'
+alias mesa-git-remove='~/.config/FedoraPostInstallScript/mesa-git-remove.sh'
 
-alias mesa-git-update='sudo dnf copr enable xxmitsu/mesa-git -y && sudo dnf update mesa-vulkan-drivers -y && sudo dnf copr disable xxmitsu/mesa-git -y && echo "Reboot Recommended"'
+alias mesa-git-update='~/.config/FedoraPostInstallScript/mesa-git-update.sh'
 EOF
 
 #Configure MangoHud
