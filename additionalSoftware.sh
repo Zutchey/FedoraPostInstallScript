@@ -43,7 +43,8 @@ flatpak install -y flathub \
     org.azahar_emu.Azahar \
     io.github.ryubing.Ryujinx \
     sh.ppy.osu \
-    io.github.flattool.Warehouse 
+    io.github.flattool.Warehouse \
+    org.gnome.Boxes
 
 #Kill sudo loop
 kill "$SUDO_PID"
