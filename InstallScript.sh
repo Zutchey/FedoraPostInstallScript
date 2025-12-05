@@ -287,4 +287,4 @@ steam steam://unlockh264/ & sleep 120; kill $(pgrep steam)
 
 echo "Setup complete! Rebooting in 30 seconds."
 sleep 30
-sudo reboot
+reboot
