@@ -14,6 +14,7 @@ SUDO_PID=$!
 #Enable Copr Repos
 sudo dnf copr enable -y derisis13/ani-cli
 sudo dnf copr enable -y kylegospo/wallpaper-engine-kde-plugin
+sudo dnf -y copr enable faugus/faugus-launcher
 
 #Install Native Software
 sudo dnf install -y --allowerasing --refresh gedit
@@ -25,6 +26,8 @@ sudo dnf install -y --allowerasing protontricks
 sudo dnf install -y --allowerasing htop
 sudo dnf install -y --allowerasing zsh
 sudo dnf install -y --allowerasing kitty
+sudo dnf install -y --allowerasing faugus-launcher
+
 
 
 #Install Flatpaks
@@ -40,8 +43,7 @@ flatpak install -y flathub \
     org.azahar_emu.Azahar \
     io.github.ryubing.Ryujinx \
     sh.ppy.osu \
-    io.github.flattool.Warehouse \
-    io.github.Faugus.faugus-launcher 
+    io.github.flattool.Warehouse 
 
 #Kill sudo loop
 kill "$SUDO_PID"
