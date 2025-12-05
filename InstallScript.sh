@@ -252,6 +252,9 @@ sudo udevadm trigger
 #temp mesa fix
 sudo dnf downgrade -y mesa\*
 
+#Kill sudo loop
+kill "$SUDO_PID"
+
 #Install flatpaks
 flatpak install -y flathub --noninteractive \
     com.usebottles.bottles \
@@ -276,9 +279,6 @@ flatpak override --user --filesystem=/usr/share/icons/:ro
 flatpak override --user --env=XCURSOR_PATH=$HOME/.icons
 flatpak override --user --filesystem=xdg-config/MangoHud:ro
 flatpak override --user --device=input org.vinegarhq.Sober
-
-#Kill sudo loop
-kill "$SUDO_PID"
 
 #Enable Steam h.264 (Auto closes after 2 minutes)
 steam steam://unlockh264/ & sleep 120; kill $(pgrep steam)
