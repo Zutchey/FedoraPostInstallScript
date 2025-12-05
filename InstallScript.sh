@@ -270,8 +270,6 @@ flatpak install -y flathub --noninteractive \
     org.vinegarhq.Sober \
     io.github.kolunmi.Bazaar 
 
-flatpak repair
-
 #Flatpak Permission Fixes
 flatpak override --user --filesystem=/home/$USER/.icons/:ro
 flatpak override --user --filesystem=/usr/share/icons/:ro
