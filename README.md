@@ -40,7 +40,7 @@ systemd-inhibit --what=idle:sleep --why="Script running" ./InstallScript.sh
 
 ## Linux App Store
 - **Bazaar** (Recommended For New Linux Users)
-- Only Flatpaks Will Show Up Here, Native Will Not
+- Only Flatpaks Will Show Up Here, Native Will Not. Steam Is Native, So It Will Not Show Up As Installed.
 
 ---
 
