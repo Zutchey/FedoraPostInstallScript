@@ -15,10 +15,9 @@ This Main Script Handles Updating System, Enabling Repositories, Proper Codec In
 
 ### **Installation Instructions**
 
-### **Computer Will Reboot**
-
 Copy And Paste Block Below Into Your Terminal And Let It Run:
 * **(CTRL + SHIFT + V TO PASTE INTO TERMINAL)**
+* **Computer Will Reboot**
 
 ```bash
 sudo dnf install git -y
