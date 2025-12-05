@@ -83,26 +83,5 @@ cat << 'EOF' > ~/.config/fastfetch/config.jsonc
 }
 EOF
 
-#Adding dns
-sudo dnf install dnsconfd -y
-
-sudo systemctl disable --now systemd-resolved
-sudo systemctl mask systemd-resolved
-sudo systemctl enable --now dnsconfd
-
-sudo mkdir -p /etc/NetworkManager/conf.d
-sudo tee /etc/NetworkManager/conf.d/global-dot.conf > /dev/null <<EOF
-[main]
-dns=dnsconfd
-
-[global-dns]
-resolve-mode=exclusive
-
-[global-dns-domain-*]
-servers=dns+tls://1.1.1.1#one.one.one.one
-EOF
-
-sudo systemctl restart NetworkManager
-
 #Kill sudo loop
 kill "$SUDO_PID"
