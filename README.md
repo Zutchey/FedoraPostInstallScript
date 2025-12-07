@@ -1,5 +1,6 @@
 ## FedoraPostInstallScript
 
+[Installation]([URL](https://github.com/Zutchey/FedoraPostInstallScript/tree/main?tab=readme-ov-file#installation-instructions))
 
 ## Important Warnings & Prerequisites
 
