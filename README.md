@@ -76,6 +76,7 @@ systemd-inhibit --what=idle:sleep --why="Script running" ./InstallScript.sh
 ## Other Applications
 - Disks//Gnome Disk Utility (Disk Manager) (**Native**)
 - Krita (Painting) (**Native**)
+- GIMP (Photo Editor) (**Native**)
 - Kdenlive (Video Editor) (**Native**)
 - Sober (Roblox) (**Flatpak**)
 - Easy Effects (Auio Processor) (**Flatpak**)
