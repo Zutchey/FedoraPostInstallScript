@@ -93,6 +93,15 @@ systemd-inhibit --what=idle:sleep --why="Script running" ./InstallScript.sh
 
 ---
 
+## Extra Terminal Commands Added
+- `system-update` - Updates Your System's Native Packages And Flatpaks
+- `mesa-git-install` - Installs Development Mesa Vulkan Drivers
+- `mesa-git-update` - Updates Development Mesa Vulkan Drivers
+- `mesa-git-remove` - Changes Them Back To Stable Drivers
+
+
+---
+
 ## Optional Additional Applications
 
 ```bash
