@@ -48,7 +48,6 @@ tar -xzf - -C ~/.config/obs-studio/plugins
 
 #Add Flathub Flatpaks
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-flatpak install --reinstall flathub $(flatpak list --app-runtime=org.fedoraproject.Platform --columns=application | tail -n +1 ) -y
 sudo flatpak remote-delete fedora
 
 #Add repositories
