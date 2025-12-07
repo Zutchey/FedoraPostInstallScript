@@ -105,23 +105,23 @@ cd ~/Downloads/FedoraPostInstallScript
 chmod +x additionalSoftware.sh
 systemd-inhibit --what=idle:sleep --why="Script running" ./additionalSoftware.sh
 ```
-- Gedit
-- ani-cli
-- qBittorrent
-- Gapless
-- Protontricks
-- htop
-- kitty
-- LocalSend
-- Spotify
-- Keypunch
-- Parabolic
-- Upscaler
-- Morphosis
-- Handbrake
-- ProtonVPN
-- osu!
-- Warehouse
-- Faugus
+- Gedit (**Native**)
+- ani-cli (**Native**)
+- qBittorrent (**Native**)
+- Gapless (**Native**)
+- Protontricks (**Native**)
+- htop (**Native**)
+- kitty (**Native**)
+- LocalSend (**Flatpak**)
+- Spotify (**Flatpak**)
+- Keypunch (**Flatpak**)
+- Parabolic (**Flatpak**)
+- Upscaler (**Flatpak**)
+- Morphosis (**Flatpak**)
+- Handbrake (**Flatpak**)
+- ProtonVPN (**Flatpak**)
+- osu! (**Flatpak**)
+- Warehouse (**Flatpak**)
+- Faugus (**Native**)
 
 
