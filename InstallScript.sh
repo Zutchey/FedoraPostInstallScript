@@ -80,7 +80,6 @@ sudo dnf install -y --allowerasing java
 sudo dnf install -y --allowerasing fastfetch
 sudo dnf install -y --allowerasing pavucontrol
 sudo dnf install -y --allowerasing gnome-disk-utility
-sudo dnf install -y --allowerasing gimp
 sudo dnf install -y --allowerasing vlc
 sudo dnf install -y --allowerasing heroic
 sudo dnf install -y --allowerasing mpv
@@ -100,8 +99,6 @@ sudo dnf install -y --allowerasing wine
 sudo dnf install -y --allowerasing wine-core
 sudo dnf install -y --allowerasing falcond
 sudo dnf install -y --allowerasing gnome-tweaks
-sudo dnf install -y --allowerasing kdenlive
-sudo dnf install -y --allowerasing krita
 sudo dnf install -y --allowerasing obs-studio-plugin-vkcapture
 sudo dnf install -y --allowerasing cpu-x
 sudo dnf install -y --allowerasing pokeget
@@ -270,7 +267,10 @@ flatpak install -y flathub --noninteractive \
     com.vysp3r.ProtonPlus \
     io.github.ilya_zlobintsev.LACT \
     org.vinegarhq.Sober \
-    io.github.kolunmi.Bazaar 
+    io.github.kolunmi.Bazaar \
+    org.kde.krita \
+    org.kde.kdenlive \
+    org.gimp.GIMP 
 
 #Flatpak Permission Fixes
 flatpak override --user --filesystem=/home/$USER/.icons/:ro
