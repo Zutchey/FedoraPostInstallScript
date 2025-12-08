@@ -17,18 +17,15 @@ sudo dnf copr enable -y kylegospo/wallpaper-engine-kde-plugin
 sudo dnf -y copr enable faugus/faugus-launcher
 
 #Install Native Software
-sudo dnf install -y --allowerasing --refresh gedit
+sudo dnf install -y --allowerasing --refresh protontricks
 sudo dnf install -y --allowerasing ani-cli
-sudo dnf install -y --allowerasing qbittorrent
-sudo dnf install -y --allowerasing g4music
 sudo dnf install -y --allowerasing wallpaper-engine-kde-plugin
-sudo dnf install -y --allowerasing protontricks
-sudo dnf install -y --allowerasing htop
 sudo dnf install -y --allowerasing zsh
 sudo dnf install -y --allowerasing kitty
 sudo dnf install -y --allowerasing faugus-launcher
 
-
+#Kill sudo loop
+kill "$SUDO_PID"
 
 #Install Flatpaks
 flatpak install -y flathub \
@@ -44,7 +41,7 @@ flatpak install -y flathub \
     io.github.ryubing.Ryujinx \
     sh.ppy.osu \
     io.github.flattool.Warehouse \
-    org.gnome.Boxes
-
-#Kill sudo loop
-kill "$SUDO_PID"
+    org.gnome.Boxes \
+    org.gnome.gedit \
+    org.qbittorrent.qBittorrent \
+    com.github.neithern.g4music 
