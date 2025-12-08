@@ -73,6 +73,9 @@ sudo dnf install -y gstreamer1-plugins-{bad-\*,good-\*,base} \
 sudo dnf group install -y multimedia
 sudo dnf group install -y sound-and-video
 
+#Remove Packages
+sudo dnf remove -y --noautoremove firefox
+
 #Install packages
 sudo dnf install -y --allowerasing --refresh steam
 sudo dnf install -y --allowerasing cargo
@@ -270,7 +273,8 @@ flatpak install -y flathub --noninteractive \
     io.github.kolunmi.Bazaar \
     org.kde.krita \
     org.kde.kdenlive \
-    org.gimp.GIMP 
+    org.gimp.GIMP \
+    org.mozilla.firefox
 
 #Flatpak Permission Fixes
 flatpak override --user --filesystem=/home/$USER/.icons/:ro
