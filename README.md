@@ -6,6 +6,7 @@ Table Of Contents:
 - [Things To Note](https://github.com/Zutchey/FedoraPostInstallScript/tree/main?tab=readme-ov-file#things-to-note)
 - [Optional Additional Applications](https://github.com/Zutchey/FedoraPostInstallScript/tree/main?tab=readme-ov-file#optional-additional-applications)
 
+---
 
 ## Important Warnings & Prerequisites
 
@@ -39,25 +40,18 @@ systemd-inhibit --what=idle:sleep --why="Script running" ./InstallScript.sh
 * Falcond Repository: https://github.com/PikaOS-Linux/falcond
 * (**Do Not Use "gamemoderun %command%" On Steam**)
 
----
-
 ## Linux App Store
 - **Bazaar** (Recommended For New Linux Users)
 - Only Flatpaks Will Show Up Here, Native Will Not. Steam Is Native, So It Will Not Show Up As Installed.
 
----
-
 **If You're Unfamiliar With Any Of The Applications Listed Below, I Recommend Looking Into Them As Each Has Enough Value To Me To Remain Part Of The Core Setup**
 
----
 ## Gaming Applications Installed
 - Steam (**Native**)
 - Heroic (**Native**)
 - Lutris (**Native**)
 - Bottles (**Flatpak**)
 - ProtonPlus (For Installing Proton-GE) (**Flatpak**)
-
----
 
 ## Important Applications
 - GPU Screen Recorder (Better Shadow Play) (**Flatpak**)
@@ -71,8 +65,6 @@ systemd-inhibit --what=idle:sleep --why="Script running" ./InstallScript.sh
 - LACT (GPU Overclocking) (**Flatpak**)
 - Mission Center (Linux's Task Manager) (**Flatpak**)
 
----
-
 ## Other Applications
 - Disks//Gnome Disk Utility (Disk Manager) (**Native**)
 - Krita (Painting) (**Native**)
@@ -81,8 +73,6 @@ systemd-inhibit --what=idle:sleep --why="Script running" ./InstallScript.sh
 - Sober (Roblox) (**Flatpak**)
 - Easy Effects (Auio Processor) (**Flatpak**)
 - Extension Manager (Make Gnome Usable) (**Flatpak**)
-
----
 
 ## Things to Note
 - **OBS Vulkan Layer And MangoHud Are Set Globally**, So You Do Not Need To Enable Them Manually For Vulkan Games
@@ -94,8 +84,6 @@ systemd-inhibit --what=idle:sleep --why="Script running" ./InstallScript.sh
 - On Steam, I Would Recommend Turning On Background Processing Of Vulkan Shaders Under Download Settings
 - Using Disks Is The Simplest Way, IMO, To Auto Mount Drives On Boot
 - My Game Launcher Prio: Steam For Games In Steam Store -> Heroic For Games In GOG Or Epic Stores -> Lutris And/Or Bottles (Based On Personal Preference) For Other Launchers, Games Without Launchers, And Sea Sailing Games
-
----
 
 ## Extra Terminal Commands Added
 - `system-update` - Updates Your System's Native Packages And Flatpaks
