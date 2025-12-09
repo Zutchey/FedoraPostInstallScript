@@ -248,9 +248,6 @@ EOF
 sudo udevadm control --reload-rules
 sudo udevadm trigger
 
-#temp mesa fix
-sudo dnf downgrade -y mesa\*
-
 #Kill sudo loop
 kill "$SUDO_PID"
 
