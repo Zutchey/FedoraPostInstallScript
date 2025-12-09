@@ -102,10 +102,10 @@ cd ~/Downloads/FedoraPostInstallScript
 chmod +x additionalSoftware.sh
 systemd-inhibit --what=idle:sleep --why="Script running" ./additionalSoftware.sh
 ```
-- Gedit (**Native**)
+- Gedit (**Flatpak**)
 - ani-cli (**Native**)
-- qBittorrent (**Native**)
-- Gapless (**Native**)
+- qBittorrent (**Flatpak**)
+- Gapless (**Flatpak**)
 - Protontricks (**Native**)
 - htop (**Native**)
 - kitty (**Native**)
