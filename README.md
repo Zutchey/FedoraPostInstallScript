@@ -3,7 +3,7 @@
 Table Of Contents:
 - [Installation](https://github.com/Zutchey/FedoraPostInstallScript/tree/main?tab=readme-ov-file#installation-instructions)
 - [IMPORTANT](https://github.com/Zutchey/FedoraPostInstallScript/tree/main?tab=readme-ov-file#important)
-- [App Store](https://github.com/Zutchey/FedoraPostInstallScript/tree/main?tab=readme-ov-file#linux-app-store)
+- [Linux App Store](https://github.com/Zutchey/FedoraPostInstallScript/tree/main?tab=readme-ov-file#linux-app-store)
 - [Things To Note](https://github.com/Zutchey/FedoraPostInstallScript/tree/main?tab=readme-ov-file#things-to-note)
 - [Optional Additional Applications](https://github.com/Zutchey/FedoraPostInstallScript/tree/main?tab=readme-ov-file#optional-additional-applications)
 
