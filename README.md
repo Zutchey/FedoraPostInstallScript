@@ -106,8 +106,6 @@ systemd-inhibit --what=idle:sleep --why="Script running" ./additionalSoftware.sh
 - ani-cli (**Native**)
 - qBittorrent (**Flatpak**)
 - Gapless (**Flatpak**)
-- Protontricks (**Native**)
-- htop (**Native**)
 - kitty (**Native**)
 - LocalSend (**Flatpak**)
 - Spotify (**Flatpak**)
