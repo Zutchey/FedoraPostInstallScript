@@ -17,11 +17,10 @@ sudo dnf copr enable -y kylegospo/wallpaper-engine-kde-plugin
 sudo dnf -y copr enable faugus/faugus-launcher
 
 #Install Native Software
-sudo dnf install -y --allowerasing --refresh protontricks
+sudo dnf install -y --allowerasing --refresh kitty
 sudo dnf install -y --allowerasing ani-cli
 sudo dnf install -y --allowerasing wallpaper-engine-kde-plugin
 sudo dnf install -y --allowerasing zsh
-sudo dnf install -y --allowerasing kitty
 sudo dnf install -y --allowerasing faugus-launcher
 
 #Kill sudo loop
