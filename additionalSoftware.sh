@@ -27,7 +27,7 @@ sudo dnf install -y --allowerasing faugus-launcher
 kill "$SUDO_PID"
 
 #Install Flatpaks
-flatpak install -y flathub \
+flatpak install -y flathub --noninteractive \
     org.localsend.localsend_app \
     com.spotify.Client \
     dev.bragefuglseth.Keypunch \
