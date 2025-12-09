@@ -83,7 +83,6 @@ sudo dnf install -y --allowerasing java
 sudo dnf install -y --allowerasing fastfetch
 sudo dnf install -y --allowerasing pavucontrol
 sudo dnf install -y --allowerasing gnome-disk-utility
-sudo dnf install -y --allowerasing vlc
 sudo dnf install -y --allowerasing heroic
 sudo dnf install -y --allowerasing mpv
 sudo dnf install -y --allowerasing curl
