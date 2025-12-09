@@ -2,6 +2,7 @@
 
 Table Of Contents:
 - [Installation](https://github.com/Zutchey/FedoraPostInstallScript/tree/main?tab=readme-ov-file#installation-instructions)
+- [Video Guide]
 - [IMPORTANT](https://github.com/Zutchey/FedoraPostInstallScript/tree/main?tab=readme-ov-file#important)
 - [Linux App Store](https://github.com/Zutchey/FedoraPostInstallScript/tree/main?tab=readme-ov-file#linux-app-store)
 - [Things To Note](https://github.com/Zutchey/FedoraPostInstallScript/tree/main?tab=readme-ov-file#things-to-note)
@@ -55,18 +56,18 @@ systemd-inhibit --what=idle:sleep --why="Script running" ./InstallScript.sh
 - ProtonPlus (For Installing Proton-GE) (**Flatpak**)
 
 ## Important Applications
-- GPU Screen Recorder (Better Shadow Play) (**Flatpak**)
-- Discord (Discord) (**Native**)
-- OBS (OBS) (**Native**)
 - BTRFS Assistant (System Snapshots) (**Native**)
-- MangoHud/Goverlay (Performance Overlay) (**Native**)
 - Gear Lever (For AppImages) (**Flatpak**)
 - Flatseal (Managing Flatpak permissions) (**Flatpak**)
-- LACT (GPU Overclocking) (**Flatpak**)
 - Mission Center (Linux's Task Manager) (**Flatpak**)
 - Disks//Gnome Disk Utility (Disk Manager) (**Native**)
 
 ## Other Applications
+- GPU Screen Recorder (Better Shadow Play) (**Flatpak**)
+- Discord (Discord) (**Native**)
+- OBS (OBS) (**Native**)
+- MangoHud/Goverlay (Performance Overlay) (**Native**)
+- LACT (GPU Overclocking) (**Flatpak**)
 - Winboat (For Windows Applications That Don't Run Through Wine) (**.rpm File**)
 - Krita (Painting) (**Flatpak**)
 - GIMP (Photo Editor) (**Flatpak**)
@@ -84,8 +85,7 @@ systemd-inhibit --what=idle:sleep --why="Script running" ./InstallScript.sh
 - Use Proton-GE Whenever Available
 - On Steam, I Would Recommend Turning On Background Processing Of Vulkan Shaders Under Download Settings
 - Using Disks Is The Simplest Way, IMO, To Auto Mount Drives On Boot
-- My Game Launcher Prio: Steam For Games In Steam Store -> Heroic For Games In GOG Or Epic Stores -> Lutris And/Or Bottles (Based On Personal Preference) For Other Launchers, Games Without Launchers, And Sea Sailing Games
-
+  
 ## Extra Terminal Commands Added
 - `system-update` - Updates Your System's Native Packages And Flatpaks
 - `mesa-git-install` - Installs Development Mesa Vulkan Drivers (Most Recent)
