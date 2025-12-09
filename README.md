@@ -85,6 +85,7 @@ systemd-inhibit --what=idle:sleep --why="Script running" ./InstallScript.sh
 - Use Proton-GE Whenever Available
 - On Steam, I Would Recommend Turning On Background Processing Of Vulkan Shaders Under Download Settings
 - Using Disks Is The Simplest Way, IMO, To Auto Mount Drives On Boot
+- For New Users; Linux Isn't Windows. Check Bazaar And/Or Discover/Software Before Downloading Software Off The Internet
   
 ## Extra Terminal Commands Added
 - `system-update` - Updates Your System's Native Packages And Flatpaks
