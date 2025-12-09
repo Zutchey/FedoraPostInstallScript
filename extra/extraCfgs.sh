@@ -10,6 +10,13 @@ SUDO_PID=$!
 #Change computer name
 sudo hostnamectl set-hostname fedora-pc
 
+#Remove Firefox
+flatpak uninstall -y firefox
+
+#Install Floorp
+sudo dnf copr enable schumischumi/floorp -y
+sudo dnf install floorp -y
+
 #Configure shell
 grep -qF 'pokeget random' ~/.bashrc || cat << 'EOF' >> ~/.bashrc
 
