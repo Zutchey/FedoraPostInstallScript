@@ -86,6 +86,8 @@ systemd-inhibit --what=idle:sleep --why="Script running" ./InstallScript.sh
 - On Steam, I Would Recommend Turning On Background Processing Of Vulkan Shaders Under Download Settings
 - Using Disks Is The Simplest Way, IMO, To Auto Mount Drives On Boot
 - For New Linux Users; Linux Isn't Windows. Check Bazaar And/Or Discover/Software Before Downloading Software Off The Internet
+- [IMPORTANT](https://github.com/Zutchey/FedoraPostInstallScript/tree/main?tab=readme-ov-file#important)
+
   
 ## Extra Terminal Commands Added
 - `system-update` - Updates Your System's Native Packages And Flatpaks
