@@ -84,7 +84,7 @@ systemd-inhibit --what=idle:sleep --why="Script running" ./InstallScript.sh
 - Games Probably Will Not Launch If Installed On NFTS Drives
 - Use Proton-GE Whenever Available
 - On Steam, I Would Recommend Turning On Background Processing Of Vulkan Shaders Under Download Settings
-- Using Disks Is The Simplest Way, IMO, To Auto Mount Drives On Boot
+- Using "Disks" Is The Simplest Way, IMO, To Auto Mount Drives On Boot
 - For New Linux Users; Linux Isn't Windows. Check Bazaar And/Or Discover/Software Before Downloading Software Off The Internet
 - [IMPORTANT](https://github.com/Zutchey/FedoraPostInstallScript/tree/main?tab=readme-ov-file#important)
 
