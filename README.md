@@ -22,7 +22,7 @@ Table Of Contents:
 ### **Installation Instructions**
 
 Copy And Paste Block Below Into Your Terminal And Let It Run:
-* **Computer Will Reboot**
+* **Computer Will Reboot Automatically**
 * **(CTRL + SHIFT + V TO PASTE INTO TERMINAL)**
 
 ```bash
