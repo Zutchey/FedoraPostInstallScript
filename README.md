@@ -14,7 +14,7 @@ Table Of Contents:
 
 * **NOT TESTED ON NVIDIA OR INTEL GPUS!** This Script Was Specifically Made With AMD In Mind.
 * **Fresh Install Recommended:** Proceed with caution. Running This On An Existing System **Might Delete Your Already Set Configurations**.
-* **Purpose:** This Script Is Intended To Ease New Users Into Fedora Linux By Automating Setup Steps. This Script Is Meant To Be A One Input Plug And Play Script, However You May Be Prompted For Your `sudo` Password More Than Once, Due To Sudo Timeout. The Main Script Handles Updating System, Enabling Repositories, Proper Codec Installation, Package Installation, And A Few Tweaks. The Second Script Is Optional And Only Contains Additional Applications. The Hope Is That You Shouldn't Need To Use The Terminal After This Script.
+* **Purpose:** This Script Is Intended To Ease New Users Into Fedora Linux By Automating Setup Steps. This Script Is Meant To Be A One Input Plug And Play Script, However You May Be Prompted For Your `sudo` Password More Than Once, Due To Sudo Timeout. The Main Script Handles Updating System, Enabling Repositories, Proper Codec Installation, Package Installation, And A Few Tweaks. The Second Script Is Optional And Only Contains Additional Applications. The Goal Is That You Shouldn't Need To Use The Terminal After This Script.
 
 
 ---
