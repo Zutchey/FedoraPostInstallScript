@@ -74,7 +74,7 @@ sudo dnf group install -y multimedia
 sudo dnf group install -y sound-and-video
 
 #Remove Packages
-sudo dnf remove -y --noautoremove firefox elisa-player dragon
+sudo dnf remove -y --noautoremove firefox elisa-player dragon akregator kwrite
 
 #Install packages
 sudo dnf install -y --allowerasing --refresh steam
@@ -264,9 +264,11 @@ flatpak install -y flathub --noninteractive \
     org.kde.krita \
     org.kde.kdenlive \
     org.gimp.GIMP \
+    org.kde.akregator \
     org.mozilla.firefox \
     org.kde.dragonplayer \
-    org.kde.elisa 
+    org.kde.elisa \
+    org.kde.kwrite 
 
 #Flatpak Permission Fixes
 #flatpak override --user --filesystem=/home/$USER/.icons/:ro
