@@ -125,13 +125,6 @@ sudo usermod -aG docker $USER
 #Install WinBoat (AppImage also exists)
 sudo dnf install -y https://github.com/TibixDev/winboat/releases/download/v0.9.0/winboat-0.9.0-x86_64.rpm
 
-#Install fonts
-sudo rpm --nodigest -i https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm
-wget -q https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/FantasqueSansMono.zip
-unzip -q FantasqueSansMono.zip -d ~/.local/share/fonts/
-rm FantasqueSansMono.zip
-fc-cache -f
-
 #System configuration
 echo 'OBS_VKCAPTURE=1' | sudo tee -a /etc/environment
 echo 'MANGOHUD=1' | sudo tee -a /etc/environment
