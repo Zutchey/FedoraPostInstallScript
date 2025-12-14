@@ -13,9 +13,14 @@ sudo hostnamectl set-hostname fedora-pc
 #Remove Firefox
 flatpak uninstall -y firefox
 
+#Install fonts
+wget -q https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/FantasqueSansMono.zip
+unzip -q FantasqueSansMono.zip -d ~/.local/share/fonts/
+rm FantasqueSansMono.zip
+fc-cache -f
+
 #Install Floorp
-sudo dnf copr enable schumischumi/floorp -y
-sudo dnf install floorp -y
+flatpak install floorp -y
 
 #Configure shell
 grep -qF 'pokeget random' ~/.bashrc || cat << 'EOF' >> ~/.bashrc
