@@ -116,6 +116,7 @@ sudo dnf install -y --allowerasing p7zip-plugins
 sudo dnf install -y --allowerasing unrar
 sudo dnf install -y --allowerasing btrbk
 sudo dnf install -y --allowerasing ms-core-fonts
+
 #Enable services
 sudo systemctl enable --now falcond
 sudo systemctl enable --now docker.service
