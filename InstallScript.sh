@@ -86,9 +86,6 @@ sudo dnf install -y --allowerasing gnome-disk-utility
 sudo dnf install -y --allowerasing heroic
 sudo dnf install -y --allowerasing mpv
 sudo dnf install -y --allowerasing curl
-sudo dnf install -y --allowerasing cabextract
-sudo dnf install -y --allowerasing xorg-x11-font-utils
-sudo dnf install -y --allowerasing fontconfig
 sudo dnf install -y --allowerasing obs-studio
 sudo dnf install -y --allowerasing umu-launcher
 sudo dnf install -y --allowerasing lutris
@@ -118,7 +115,7 @@ sudo dnf install -y --allowerasing p7zip
 sudo dnf install -y --allowerasing p7zip-plugins
 sudo dnf install -y --allowerasing unrar
 sudo dnf install -y --allowerasing btrbk
-
+sudo dnf install -y --allowerasing ms-core-fonts
 #Enable services
 sudo systemctl enable --now falcond
 sudo systemctl enable --now docker.service
