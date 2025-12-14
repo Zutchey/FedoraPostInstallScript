@@ -74,7 +74,7 @@ sudo dnf group install -y multimedia
 sudo dnf group install -y sound-and-video
 
 #Remove Packages
-sudo dnf remove -y --noautoremove firefox
+sudo dnf remove -y --noautoremove firefox elisa-player dragon
 
 #Install packages
 sudo dnf install -y --allowerasing --refresh steam
@@ -238,6 +238,9 @@ EOF
 sudo udevadm control --reload-rules
 sudo udevadm trigger
 
+#Flatpak remove fedora again (just in case)
+sudo flatpak remote-delete fedora
+
 #Kill sudo loop
 kill "$SUDO_PID"
 
@@ -261,7 +264,9 @@ flatpak install -y flathub --noninteractive \
     org.kde.krita \
     org.kde.kdenlive \
     org.gimp.GIMP \
-    org.mozilla.firefox
+    org.mozilla.firefox \
+    org.kde.dragonplayer \
+    org.kde.elisa 
 
 #Flatpak Permission Fixes
 #flatpak override --user --filesystem=/home/$USER/.icons/:ro
